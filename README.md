@@ -224,3 +224,22 @@ The project is planned as an eight-week implementation:
 The intended outcome is a working distributed LSM-Tree key-value storage engine with strong consistency, crash recovery, OS-level I/O experimentation, automated failure testing, and measurable benchmark results.
 
 The project is primarily an engineering and experimental system intended to demonstrate the interaction between storage engines, operating-system I/O, and distributed consensus.
+
+## Quick Start & Build
+
+For comprehensive details on the storage API, configuration, and team integration points, see [WEEK1_STORAGE_HANDOFF.md](docs/WEEK1_STORAGE_HANDOFF.md).
+
+### Building with CMake
+```bash
+# Configure
+cmake -B build
+
+# Build (libraries, node daemon, and tests)
+cmake --build build
+
+# Run unit tests
+./build/lsm_unit_tests
+
+# Run smoke test
+./build/lsm_smoke_test
+```
