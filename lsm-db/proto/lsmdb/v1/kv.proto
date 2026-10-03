@@ -1,0 +1,41 @@
+// Client -> node key-value API.
+syntax = "proto3";
+
+package lsmdb.v1;
+
+import "lsmdb/v1/common.proto";
+
+service KvService {
+  rpc Put(PutRequest) returns (PutResponse);
+  rpc Get(GetRequest) returns (GetResponse);
+  rpc Delete(DeleteRequest) returns (DeleteResponse);
+}
+
+// Keys and values are arbitrary bytes (not necessarily UTF-8).
+// Limits: key 1..1024 bytes, value 0..1048576 bytes.
+message PutRequest {
+  RequestMeta meta = 1;
+  bytes key = 2;
+  bytes value = 3;
+}
+message PutResponse {
+  Status status = 1;
+}
+
+message GetRequest {
+  RequestMeta meta = 1;
+  bytes key = 2;
+}
+message GetResponse {
+  Status status = 1;  // STATUS_CODE_NOT_FOUND when the key is absent
+  bytes value = 2;    // only meaningful when status.code == OK
+}
+
+// Delete is idempotent: deleting a missing key returns OK.
+message DeleteRequest {
+  RequestMeta meta = 1;
+  bytes key = 2;
+}
+message DeleteResponse {
+  Status status = 1;
+}
