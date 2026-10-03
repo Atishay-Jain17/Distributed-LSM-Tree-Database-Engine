@@ -1,11 +1,11 @@
-// Minimal placeholder node binary for Week 1 Kubernetes/Helm smoke testing.
+// Minimal placeholder node binary for Week 1 Kubernetes/Helm testing.
 //
-// This is NOT the real database service (that's Vinayak's gRPC contract,
-// coming later this week). Its only job is to:
+// This is NOT the real database service (that's Vinayak's gRPC contract).
+// Its job is to:
 //   1. Prove a C++ binary can be containerized and run as a pod
-//   2. Read its identity from env vars injected by Kubernetes
-//   3. Listen on a TCP port so `kubectl exec ... nc` / curl can prove
-//      pod-to-pod reachability across the headless service
+//   2. Read its identity (and now its peers) from env vars injected by
+//      Kubernetes, proving the config-injection mechanism works
+//   3. Listen on a TCP port so pod-to-pod reachability can be verified
 //
 // Once Vinayak's gRPC service exists, this file gets replaced/wired in —
 // the Dockerfile and Helm chart around it do not need to change.
@@ -21,14 +21,17 @@ int main() {
     const char* node_id  = std::getenv("NODE_ID");
     const char* pod_name = std::getenv("POD_NAME");
     const char* port_env = std::getenv("NODE_PORT");
+    const char* peers_env = std::getenv("PEERS");
 
     std::string node_id_str  = node_id  ? node_id  : "unknown-node";
     std::string pod_name_str = pod_name ? pod_name : "unknown-pod";
+    std::string peers_str    = peers_env ? peers_env : "(none)";
     int port = port_env ? std::atoi(port_env) : 50051;
 
     std::cout << "[placeholder-node] starting. NODE_ID=" << node_id_str
               << " POD_NAME=" << pod_name_str
-              << " PORT=" << port << std::endl;
+              << " PORT=" << port
+              << " PEERS=" << peers_str << std::endl;
 
     int server_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (server_fd < 0) {
@@ -63,7 +66,8 @@ int main() {
         if (client_fd < 0) continue;
 
         std::string response = "Hello from " + node_id_str +
-                                " (pod: " + pod_name_str + ")\n";
+                                " (pod: " + pod_name_str +
+                                ", peers: " + peers_str + ")\n";
         write(client_fd, response.c_str(), response.size());
         close(client_fd);
     }

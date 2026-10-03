@@ -12,8 +12,24 @@ node:
   port: 50051
 
 storage:
-  # Week 1 (Mon task) will flesh this out further; this is a minimal
-  # starting size so the StatefulSet has a working volumeClaimTemplate
-  # from day one.
+  # Each pod in the StatefulSet gets its OWN PersistentVolumeClaim (see
+  # volumeClaimTemplates in statefulset.yaml), so this size/class applies
+  # per-node, not to the cluster as a whole.
+  #
+  # size: start small for local dev (kind); bump this for real workloads
+  # once the storage engine's actual on-disk footprint is known.
   size: 1Gi
+  #
+  # storageClassName: "standard" is kind's default StorageClass, backed by
+  # local-path-provisioner (data lives on the kind node container's own
+  # disk). This is fine for local development but is NOT suitable for a
+  # real multi-machine cluster, since local-path volumes aren't portable
+  # across nodes. On a real cloud cluster, set this to that provider's
+  # SSD-backed class (e.g. "gp3" on EKS, "premium-rwo" on GKE).
   storageClassName: standard
+  #
+  # accessModes: ReadWriteOnce means the volume can only be mounted
+  # read-write by a single pod at a time -- correct for a database node
+  # that owns its own local storage exclusively (not shared storage).
+  accessModes:
+    - ReadWriteOnce

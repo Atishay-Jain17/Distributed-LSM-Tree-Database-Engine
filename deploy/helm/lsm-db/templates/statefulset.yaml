@@ -32,8 +32,10 @@ spec:
             - containerPort: {{ .Values.node.port }}
               name: node-port
           env:
-            # Kubernetes fills these in automatically per-pod. This is the
-            # "configuration injection" mechanism Tuesday's task builds on.
+            # Kubernetes fills these in automatically per-pod via the
+            # Downward API, so the SAME container image works identically
+            # on every replica -- each one just reads its own identity
+            # at startup instead of needing a separate image per node.
             - name: POD_NAME
               valueFrom:
                 fieldRef:
@@ -44,6 +46,13 @@ spec:
                   fieldPath: metadata.name
             - name: NODE_PORT
               value: "{{ .Values.node.port }}"
+            # PEERS: a comma-separated list of every node's stable DNS
+            # name (via the headless service), so each node can discover
+            # and dial its peers for Raft without any external service
+            # registry. Built at template-render time from replicaCount,
+            # so it automatically stays correct if replicaCount changes.
+            - name: PEERS
+              value: {{ range $i := until (int .Values.replicaCount) }}{{ $.Release.Name }}-{{ $i }}.{{ $.Release.Name }}-headless:{{ $.Values.node.port }}{{ if lt (add1 $i) (int $.Values.replicaCount) }},{{ end }}{{ end }}
           volumeMounts:
             - name: data
               mountPath: /data
@@ -51,7 +60,7 @@ spec:
     - metadata:
         name: data
       spec:
-        accessModes: ["ReadWriteOnce"]
+        accessModes: {{ .Values.storage.accessModes | toYaml | nindent 10 }}
         storageClassName: {{ .Values.storage.storageClassName }}
         resources:
           requests:
