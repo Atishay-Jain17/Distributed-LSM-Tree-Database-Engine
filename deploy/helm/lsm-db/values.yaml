@@ -1,0 +1,19 @@
+# Central configuration for the LSM DB cluster.
+# Change these instead of editing the templates directly.
+
+replicaCount: 3
+
+image:
+  repository: lsm-db-node
+  tag: "dev"
+  pullPolicy: IfNotPresent
+
+node:
+  port: 50051
+
+storage:
+  # Week 1 (Mon task) will flesh this out further; this is a minimal
+  # starting size so the StatefulSet has a working volumeClaimTemplate
+  # from day one.
+  size: 1Gi
+  storageClassName: standard
