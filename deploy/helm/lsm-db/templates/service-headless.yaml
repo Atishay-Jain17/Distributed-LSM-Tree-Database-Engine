@@ -1,0 +1,24 @@
+# Headless service: clusterIP: None means Kubernetes does NOT load-balance
+# across pods. Instead, DNS returns one A-record per pod, giving each pod
+# a stable, individually-addressable hostname:
+#
+#   <pod-name>.<service-name>.<namespace>.svc.cluster.local
+#
+# e.g. lsm-db-0.lsm-db-headless.default.svc.cluster.local
+#
+# This is exactly what Raft peer discovery needs later: deterministic,
+# stable addresses for each node that don't change across restarts.
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-headless
+  labels:
+    app.kubernetes.io/name: lsm-db
+spec:
+  clusterIP: None
+  selector:
+    app.kubernetes.io/name: lsm-db
+  ports:
+    - name: node-port
+      port: {{ .Values.node.port }}
+      targetPort: {{ .Values.node.port }}
