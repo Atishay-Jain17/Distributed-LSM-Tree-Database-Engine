@@ -36,6 +36,13 @@ class MemTableBackend : public rpc::StorageBackend {
   // Read as of `read_seq`; use LastSequence() captured earlier for a stable snapshot.
   LookupResult GetAt(const std::string& key, SequenceNumber read_seq) const;
 
+  // RECOVERY ONLY (Week 3): re-apply a record read from the WAL with its ORIGINAL sequence
+  // number. Call from a single thread before the node serves requests. Sequence numbers must
+  // be increasing (gaps are fine: records already flushed to SSTables are skipped). Afterwards
+  // new writes continue from the highest restored sequence + 1.
+  void Restore(SequenceNumber seq, ValueType type, const std::string& key,
+               const std::string& value);
+
   const MemTable& memtable() const { return *memtable_; }
 
  private:

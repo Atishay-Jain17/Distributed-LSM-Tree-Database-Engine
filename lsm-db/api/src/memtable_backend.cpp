@@ -17,6 +17,15 @@ void MemTableBackend::Write(ValueType type, const std::string& key, const std::s
   last_visible_.store(seq, std::memory_order_release);
 }
 
+void MemTableBackend::Restore(SequenceNumber seq, ValueType type, const std::string& key,
+                              const std::string& value) {
+  std::lock_guard<std::mutex> lock(write_mu_);
+  if (seq < next_seq_) throw std::logic_error("Restore: sequence numbers must increase");
+  memtable_->Add(seq, type, key, value);
+  next_seq_ = seq + 1;
+  last_visible_.store(seq, std::memory_order_release);
+}
+
 void MemTableBackend::Put(const std::string& key, const std::string& value) {
   Write(ValueType::kValue, key, value);
 }

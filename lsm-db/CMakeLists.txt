@@ -21,3 +21,7 @@ add_subdirectory(tests/rpc)
 # --- Week 2 (Suhani): single-node storage API over a MemTable.
 add_subdirectory(api)
 add_subdirectory(tests/api)
+
+# --- Week 3 (Suhani): startup recovery (WAL replay into the MemTable).
+add_subdirectory(recovery)
+add_subdirectory(tests/recovery)
