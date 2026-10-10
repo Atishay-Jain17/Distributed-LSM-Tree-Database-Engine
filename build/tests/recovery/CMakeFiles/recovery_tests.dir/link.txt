@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/recovery_tests.dir/link.d CMakeFiles/recovery_tests.dir/recovery_test.cpp.o -o recovery_tests  ../../recovery/liblsmdb_recovery.a /usr/lib/x86_64-linux-gnu/libgtest_main.a ../../api/liblsmdb_api.a /usr/lib/x86_64-linux-gnu/libgtest.a

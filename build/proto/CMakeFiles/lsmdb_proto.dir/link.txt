@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsmdb_proto.a CMakeFiles/lsmdb_proto.dir/gen/lsmdb/v1/common.pb.cc.o CMakeFiles/lsmdb_proto.dir/gen/lsmdb/v1/common.grpc.pb.cc.o CMakeFiles/lsmdb_proto.dir/gen/lsmdb/v1/kv.pb.cc.o CMakeFiles/lsmdb_proto.dir/gen/lsmdb/v1/kv.grpc.pb.cc.o CMakeFiles/lsmdb_proto.dir/gen/lsmdb/v1/node.pb.cc.o CMakeFiles/lsmdb_proto.dir/gen/lsmdb/v1/node.grpc.pb.cc.o
+/usr/bin/ranlib liblsmdb_proto.a

@@ -1,0 +1,2677 @@
+Start testing: Oct 10 20:51 UTC
+----------------------------------------------------------
+1/99 Testing: Validation.AcceptsTypicalPut
+1/99 Test: Validation.AcceptsTypicalPut
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Validation.AcceptsTypicalPut" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Validation.AcceptsTypicalPut" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.AcceptsTypicalPut
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.AcceptsTypicalPut
+[       OK ] Validation.AcceptsTypicalPut (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.AcceptsTypicalPut" end time: Oct 10 20:51 UTC
+"Validation.AcceptsTypicalPut" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/99 Testing: Validation.RejectsEmptyKey
+2/99 Test: Validation.RejectsEmptyKey
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Validation.RejectsEmptyKey" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Validation.RejectsEmptyKey" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.RejectsEmptyKey
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.RejectsEmptyKey
+[       OK ] Validation.RejectsEmptyKey (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.RejectsEmptyKey" end time: Oct 10 20:51 UTC
+"Validation.RejectsEmptyKey" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/99 Testing: Validation.KeyLengthBoundary
+3/99 Test: Validation.KeyLengthBoundary
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Validation.KeyLengthBoundary" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Validation.KeyLengthBoundary" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.KeyLengthBoundary
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.KeyLengthBoundary
+[       OK ] Validation.KeyLengthBoundary (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.KeyLengthBoundary" end time: Oct 10 20:51 UTC
+"Validation.KeyLengthBoundary" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/99 Testing: Validation.ValueLengthBoundaryAndEmptyValueAllowed
+4/99 Test: Validation.ValueLengthBoundaryAndEmptyValueAllowed
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Validation.ValueLengthBoundaryAndEmptyValueAllowed" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Validation.ValueLengthBoundaryAndEmptyValueAllowed" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.ValueLengthBoundaryAndEmptyValueAllowed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.ValueLengthBoundaryAndEmptyValueAllowed
+[       OK ] Validation.ValueLengthBoundaryAndEmptyValueAllowed (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.ValueLengthBoundaryAndEmptyValueAllowed" end time: Oct 10 20:51 UTC
+"Validation.ValueLengthBoundaryAndEmptyValueAllowed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/99 Testing: Validation.RequestIdTooLongRejectedForEveryRequestType
+5/99 Test: Validation.RequestIdTooLongRejectedForEveryRequestType
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Validation.RequestIdTooLongRejectedForEveryRequestType" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Validation.RequestIdTooLongRejectedForEveryRequestType" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.RequestIdTooLongRejectedForEveryRequestType
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.RequestIdTooLongRejectedForEveryRequestType
+[       OK ] Validation.RequestIdTooLongRejectedForEveryRequestType (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.RequestIdTooLongRejectedForEveryRequestType" end time: Oct 10 20:51 UTC
+"Validation.RequestIdTooLongRejectedForEveryRequestType" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/99 Testing: Validation.MissingMetaIsAllowed
+6/99 Test: Validation.MissingMetaIsAllowed
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Validation.MissingMetaIsAllowed" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Validation.MissingMetaIsAllowed" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.MissingMetaIsAllowed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.MissingMetaIsAllowed
+[       OK ] Validation.MissingMetaIsAllowed (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.MissingMetaIsAllowed" end time: Oct 10 20:51 UTC
+"Validation.MissingMetaIsAllowed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/99 Testing: Validation.GetAndDeleteRejectEmptyKey
+7/99 Test: Validation.GetAndDeleteRejectEmptyKey
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Validation.GetAndDeleteRejectEmptyKey" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Validation.GetAndDeleteRejectEmptyKey" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.GetAndDeleteRejectEmptyKey
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.GetAndDeleteRejectEmptyKey
+[       OK ] Validation.GetAndDeleteRejectEmptyKey (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.GetAndDeleteRejectEmptyKey" end time: Oct 10 20:51 UTC
+"Validation.GetAndDeleteRejectEmptyKey" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/99 Testing: Validation.BinaryKeysWithNulBytesAreValid
+8/99 Test: Validation.BinaryKeysWithNulBytesAreValid
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Validation.BinaryKeysWithNulBytesAreValid" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Validation.BinaryKeysWithNulBytesAreValid" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Validation.BinaryKeysWithNulBytesAreValid
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Validation
+[ RUN      ] Validation.BinaryKeysWithNulBytesAreValid
+[       OK ] Validation.BinaryKeysWithNulBytesAreValid (0 ms)
+[----------] 1 test from Validation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Validation.BinaryKeysWithNulBytesAreValid" end time: Oct 10 20:51 UTC
+"Validation.BinaryKeysWithNulBytesAreValid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/99 Testing: Serialization.PutRequestPreservesBinaryKeyAndValue
+9/99 Test: Serialization.PutRequestPreservesBinaryKeyAndValue
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Serialization.PutRequestPreservesBinaryKeyAndValue" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Serialization.PutRequestPreservesBinaryKeyAndValue" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Serialization.PutRequestPreservesBinaryKeyAndValue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Serialization
+[ RUN      ] Serialization.PutRequestPreservesBinaryKeyAndValue
+[       OK ] Serialization.PutRequestPreservesBinaryKeyAndValue (0 ms)
+[----------] 1 test from Serialization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Serialization.PutRequestPreservesBinaryKeyAndValue" end time: Oct 10 20:51 UTC
+"Serialization.PutRequestPreservesBinaryKeyAndValue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/99 Testing: Serialization.LargeValueRoundTrip
+10/99 Test: Serialization.LargeValueRoundTrip
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Serialization.LargeValueRoundTrip" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Serialization.LargeValueRoundTrip" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Serialization.LargeValueRoundTrip
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Serialization
+[ RUN      ] Serialization.LargeValueRoundTrip
+[       OK ] Serialization.LargeValueRoundTrip (1 ms)
+[----------] 1 test from Serialization (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Serialization.LargeValueRoundTrip" end time: Oct 10 20:51 UTC
+"Serialization.LargeValueRoundTrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/99 Testing: Serialization.DefaultStatusIsOk
+11/99 Test: Serialization.DefaultStatusIsOk
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Serialization.DefaultStatusIsOk" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Serialization.DefaultStatusIsOk" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Serialization.DefaultStatusIsOk
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Serialization
+[ RUN      ] Serialization.DefaultStatusIsOk
+[       OK ] Serialization.DefaultStatusIsOk (0 ms)
+[----------] 1 test from Serialization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Serialization.DefaultStatusIsOk" end time: Oct 10 20:51 UTC
+"Serialization.DefaultStatusIsOk" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/99 Testing: Serialization.NotLeaderStatusCarriesLeaderHint
+12/99 Test: Serialization.NotLeaderStatusCarriesLeaderHint
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Serialization.NotLeaderStatusCarriesLeaderHint" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Serialization.NotLeaderStatusCarriesLeaderHint" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Serialization.NotLeaderStatusCarriesLeaderHint
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Serialization
+[ RUN      ] Serialization.NotLeaderStatusCarriesLeaderHint
+[       OK ] Serialization.NotLeaderStatusCarriesLeaderHint (0 ms)
+[----------] 1 test from Serialization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Serialization.NotLeaderStatusCarriesLeaderHint" end time: Oct 10 20:51 UTC
+"Serialization.NotLeaderStatusCarriesLeaderHint" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/99 Testing: Serialization.NodeToNodePingAndInfoMessages
+13/99 Test: Serialization.NodeToNodePingAndInfoMessages
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Serialization.NodeToNodePingAndInfoMessages" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Serialization.NodeToNodePingAndInfoMessages" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Serialization.NodeToNodePingAndInfoMessages
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Serialization
+[ RUN      ] Serialization.NodeToNodePingAndInfoMessages
+[       OK ] Serialization.NodeToNodePingAndInfoMessages (0 ms)
+[----------] 1 test from Serialization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Serialization.NodeToNodePingAndInfoMessages" end time: Oct 10 20:51 UTC
+"Serialization.NodeToNodePingAndInfoMessages" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/99 Testing: Serialization.GarbageBytesAreRejected
+14/99 Test: Serialization.GarbageBytesAreRejected
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Serialization.GarbageBytesAreRejected" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Serialization.GarbageBytesAreRejected" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Serialization.GarbageBytesAreRejected
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Serialization
+[ RUN      ] Serialization.GarbageBytesAreRejected
+[       OK ] Serialization.GarbageBytesAreRejected (0 ms)
+[----------] 1 test from Serialization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Serialization.GarbageBytesAreRejected" end time: Oct 10 20:51 UTC
+"Serialization.GarbageBytesAreRejected" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/99 Testing: Serialization.UnknownFieldsFromNewerPeersAreIgnored
+15/99 Test: Serialization.UnknownFieldsFromNewerPeersAreIgnored
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Serialization.UnknownFieldsFromNewerPeersAreIgnored" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Serialization.UnknownFieldsFromNewerPeersAreIgnored" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Serialization.UnknownFieldsFromNewerPeersAreIgnored
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Serialization
+[ RUN      ] Serialization.UnknownFieldsFromNewerPeersAreIgnored
+[       OK ] Serialization.UnknownFieldsFromNewerPeersAreIgnored (0 ms)
+[----------] 1 test from Serialization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Serialization.UnknownFieldsFromNewerPeersAreIgnored" end time: Oct 10 20:51 UTC
+"Serialization.UnknownFieldsFromNewerPeersAreIgnored" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/99 Testing: Serialization.StatusCodeNumbersAreFrozen
+16/99 Test: Serialization.StatusCodeNumbersAreFrozen
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=Serialization.StatusCodeNumbersAreFrozen" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"Serialization.StatusCodeNumbersAreFrozen" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Serialization.StatusCodeNumbersAreFrozen
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Serialization
+[ RUN      ] Serialization.StatusCodeNumbersAreFrozen
+[       OK ] Serialization.StatusCodeNumbersAreFrozen (0 ms)
+[----------] 1 test from Serialization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Serialization.StatusCodeNumbersAreFrozen" end time: Oct 10 20:51 UTC
+"Serialization.StatusCodeNumbersAreFrozen" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/99 Testing: ParsePeers.ParsesTwoPeers
+17/99 Test: ParsePeers.ParsesTwoPeers
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=ParsePeers.ParsesTwoPeers" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"ParsePeers.ParsesTwoPeers" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ParsePeers.ParsesTwoPeers
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ParsePeers
+[ RUN      ] ParsePeers.ParsesTwoPeers
+[       OK ] ParsePeers.ParsesTwoPeers (0 ms)
+[----------] 1 test from ParsePeers (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ParsePeers.ParsesTwoPeers" end time: Oct 10 20:51 UTC
+"ParsePeers.ParsesTwoPeers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/99 Testing: ParsePeers.EmptyMeansNoPeers
+18/99 Test: ParsePeers.EmptyMeansNoPeers
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=ParsePeers.EmptyMeansNoPeers" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"ParsePeers.EmptyMeansNoPeers" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ParsePeers.EmptyMeansNoPeers
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ParsePeers
+[ RUN      ] ParsePeers.EmptyMeansNoPeers
+[       OK ] ParsePeers.EmptyMeansNoPeers (0 ms)
+[----------] 1 test from ParsePeers (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ParsePeers.EmptyMeansNoPeers" end time: Oct 10 20:51 UTC
+"ParsePeers.EmptyMeansNoPeers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/99 Testing: ParsePeers.RejectsMalformedInput
+19/99 Test: ParsePeers.RejectsMalformedInput
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=ParsePeers.RejectsMalformedInput" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"ParsePeers.RejectsMalformedInput" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ParsePeers.RejectsMalformedInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ParsePeers
+[ RUN      ] ParsePeers.RejectsMalformedInput
+[       OK ] ParsePeers.RejectsMalformedInput (0 ms)
+[----------] 1 test from ParsePeers (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ParsePeers.RejectsMalformedInput" end time: Oct 10 20:51 UTC
+"ParsePeers.RejectsMalformedInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/99 Testing: ValidateNodeOptions.AcceptsGoodOptions
+20/99 Test: ValidateNodeOptions.AcceptsGoodOptions
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=ValidateNodeOptions.AcceptsGoodOptions" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"ValidateNodeOptions.AcceptsGoodOptions" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ValidateNodeOptions.AcceptsGoodOptions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ValidateNodeOptions
+[ RUN      ] ValidateNodeOptions.AcceptsGoodOptions
+[       OK ] ValidateNodeOptions.AcceptsGoodOptions (0 ms)
+[----------] 1 test from ValidateNodeOptions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ValidateNodeOptions.AcceptsGoodOptions" end time: Oct 10 20:51 UTC
+"ValidateNodeOptions.AcceptsGoodOptions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/99 Testing: ValidateNodeOptions.RejectsBadOptions
+21/99 Test: ValidateNodeOptions.RejectsBadOptions
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=ValidateNodeOptions.RejectsBadOptions" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"ValidateNodeOptions.RejectsBadOptions" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ValidateNodeOptions.RejectsBadOptions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ValidateNodeOptions
+[ RUN      ] ValidateNodeOptions.RejectsBadOptions
+[       OK ] ValidateNodeOptions.RejectsBadOptions (0 ms)
+[----------] 1 test from ValidateNodeOptions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ValidateNodeOptions.RejectsBadOptions" end time: Oct 10 20:51 UTC
+"ValidateNodeOptions.RejectsBadOptions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/99 Testing: KvServiceTest.PutThenGet
+22/99 Test: KvServiceTest.PutThenGet
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.PutThenGet" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.PutThenGet" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.PutThenGet
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.PutThenGet
+[       OK ] KvServiceTest.PutThenGet (8 ms)
+[----------] 1 test from KvServiceTest (8 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (8 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.PutThenGet" end time: Oct 10 20:51 UTC
+"KvServiceTest.PutThenGet" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/99 Testing: KvServiceTest.OverwriteReturnsLatestValue
+23/99 Test: KvServiceTest.OverwriteReturnsLatestValue
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.OverwriteReturnsLatestValue" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.OverwriteReturnsLatestValue" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.OverwriteReturnsLatestValue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.OverwriteReturnsLatestValue
+[       OK ] KvServiceTest.OverwriteReturnsLatestValue (9 ms)
+[----------] 1 test from KvServiceTest (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (9 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.OverwriteReturnsLatestValue" end time: Oct 10 20:51 UTC
+"KvServiceTest.OverwriteReturnsLatestValue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/99 Testing: KvServiceTest.MissingKeyIsNotFoundNotAnError
+24/99 Test: KvServiceTest.MissingKeyIsNotFoundNotAnError
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.MissingKeyIsNotFoundNotAnError" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.MissingKeyIsNotFoundNotAnError" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.MissingKeyIsNotFoundNotAnError
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.MissingKeyIsNotFoundNotAnError
+[       OK ] KvServiceTest.MissingKeyIsNotFoundNotAnError (8 ms)
+[----------] 1 test from KvServiceTest (8 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (8 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.MissingKeyIsNotFoundNotAnError" end time: Oct 10 20:51 UTC
+"KvServiceTest.MissingKeyIsNotFoundNotAnError" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/99 Testing: KvServiceTest.DeleteRemovesKeyAndIsIdempotent
+25/99 Test: KvServiceTest.DeleteRemovesKeyAndIsIdempotent
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.DeleteRemovesKeyAndIsIdempotent" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.DeleteRemovesKeyAndIsIdempotent" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.DeleteRemovesKeyAndIsIdempotent
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.DeleteRemovesKeyAndIsIdempotent
+[       OK ] KvServiceTest.DeleteRemovesKeyAndIsIdempotent (5 ms)
+[----------] 1 test from KvServiceTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.DeleteRemovesKeyAndIsIdempotent" end time: Oct 10 20:51 UTC
+"KvServiceTest.DeleteRemovesKeyAndIsIdempotent" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/99 Testing: KvServiceTest.EmptyValueRoundTrips
+26/99 Test: KvServiceTest.EmptyValueRoundTrips
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.EmptyValueRoundTrips" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.EmptyValueRoundTrips" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.EmptyValueRoundTrips
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.EmptyValueRoundTrips
+[       OK ] KvServiceTest.EmptyValueRoundTrips (7 ms)
+[----------] 1 test from KvServiceTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.EmptyValueRoundTrips" end time: Oct 10 20:51 UTC
+"KvServiceTest.EmptyValueRoundTrips" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/99 Testing: KvServiceTest.BinaryKeysAndValuesSurviveTheWire
+27/99 Test: KvServiceTest.BinaryKeysAndValuesSurviveTheWire
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.BinaryKeysAndValuesSurviveTheWire" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.BinaryKeysAndValuesSurviveTheWire" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.BinaryKeysAndValuesSurviveTheWire
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.BinaryKeysAndValuesSurviveTheWire
+[       OK ] KvServiceTest.BinaryKeysAndValuesSurviveTheWire (4 ms)
+[----------] 1 test from KvServiceTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.BinaryKeysAndValuesSurviveTheWire" end time: Oct 10 20:51 UTC
+"KvServiceTest.BinaryKeysAndValuesSurviveTheWire" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/99 Testing: KvServiceTest.InvalidRequestsNeverReachStorage
+28/99 Test: KvServiceTest.InvalidRequestsNeverReachStorage
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.InvalidRequestsNeverReachStorage" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.InvalidRequestsNeverReachStorage" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.InvalidRequestsNeverReachStorage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.InvalidRequestsNeverReachStorage
+[       OK ] KvServiceTest.InvalidRequestsNeverReachStorage (9 ms)
+[----------] 1 test from KvServiceTest (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (9 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.InvalidRequestsNeverReachStorage" end time: Oct 10 20:51 UTC
+"KvServiceTest.InvalidRequestsNeverReachStorage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/99 Testing: KvServiceTest.MaxSizeValueIsAccepted
+29/99 Test: KvServiceTest.MaxSizeValueIsAccepted
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.MaxSizeValueIsAccepted" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.MaxSizeValueIsAccepted" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.MaxSizeValueIsAccepted
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.MaxSizeValueIsAccepted
+[       OK ] KvServiceTest.MaxSizeValueIsAccepted (12 ms)
+[----------] 1 test from KvServiceTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (12 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.MaxSizeValueIsAccepted" end time: Oct 10 20:51 UTC
+"KvServiceTest.MaxSizeValueIsAccepted" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/99 Testing: KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument
+30/99 Test: KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument
+[       OK ] KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument (12 ms)
+[----------] 1 test from KvServiceTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (12 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument" end time: Oct 10 20:51 UTC
+"KvServiceTest.MessageAboveTransportLimitMapsToInvalidArgument" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/99 Testing: KvServiceTest.OversizedRequestIdIsRejectedByServer
+31/99 Test: KvServiceTest.OversizedRequestIdIsRejectedByServer
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.OversizedRequestIdIsRejectedByServer" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.OversizedRequestIdIsRejectedByServer" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.OversizedRequestIdIsRejectedByServer
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.OversizedRequestIdIsRejectedByServer
+[       OK ] KvServiceTest.OversizedRequestIdIsRejectedByServer (4 ms)
+[----------] 1 test from KvServiceTest (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.OversizedRequestIdIsRejectedByServer" end time: Oct 10 20:51 UTC
+"KvServiceTest.OversizedRequestIdIsRejectedByServer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/99 Testing: KvServiceTest.ConcurrentClientsDoNotLoseWrites
+32/99 Test: KvServiceTest.ConcurrentClientsDoNotLoseWrites
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceTest.ConcurrentClientsDoNotLoseWrites" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceTest.ConcurrentClientsDoNotLoseWrites" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceTest.ConcurrentClientsDoNotLoseWrites
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceTest
+[ RUN      ] KvServiceTest.ConcurrentClientsDoNotLoseWrites
+[       OK ] KvServiceTest.ConcurrentClientsDoNotLoseWrites (153 ms)
+[----------] 1 test from KvServiceTest (153 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (153 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceTest.ConcurrentClientsDoNotLoseWrites" end time: Oct 10 20:51 UTC
+"KvServiceTest.ConcurrentClientsDoNotLoseWrites" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/99 Testing: KvServiceFailure.StorageExceptionBecomesInternalStatus
+33/99 Test: KvServiceFailure.StorageExceptionBecomesInternalStatus
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceFailure.StorageExceptionBecomesInternalStatus" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceFailure.StorageExceptionBecomesInternalStatus" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceFailure.StorageExceptionBecomesInternalStatus
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceFailure
+[ RUN      ] KvServiceFailure.StorageExceptionBecomesInternalStatus
+[       OK ] KvServiceFailure.StorageExceptionBecomesInternalStatus (9 ms)
+[----------] 1 test from KvServiceFailure (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (9 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceFailure.StorageExceptionBecomesInternalStatus" end time: Oct 10 20:51 UTC
+"KvServiceFailure.StorageExceptionBecomesInternalStatus" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/99 Testing: KvServiceFailure.DeadNodeReportsUnavailable
+34/99 Test: KvServiceFailure.DeadNodeReportsUnavailable
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=KvServiceFailure.DeadNodeReportsUnavailable" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"KvServiceFailure.DeadNodeReportsUnavailable" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = KvServiceFailure.DeadNodeReportsUnavailable
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from KvServiceFailure
+[ RUN      ] KvServiceFailure.DeadNodeReportsUnavailable
+[       OK ] KvServiceFailure.DeadNodeReportsUnavailable (4 ms)
+[----------] 1 test from KvServiceFailure (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"KvServiceFailure.DeadNodeReportsUnavailable" end time: Oct 10 20:51 UTC
+"KvServiceFailure.DeadNodeReportsUnavailable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/99 Testing: NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts
+35/99 Test: NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeService
+[ RUN      ] NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts
+[       OK ] NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts (7 ms)
+[----------] 1 test from NodeService (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts" end time: Oct 10 20:51 UTC
+"NodeService.ThreeNodesHaveDistinctIdentitiesAndPorts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/99 Testing: NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers
+36/99 Test: NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeService
+[ RUN      ] NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers
+[       OK ] NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers (7 ms)
+[----------] 1 test from NodeService (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers" end time: Oct 10 20:51 UTC
+"NodeService.GetNodeInfoReturnsSelfAndConfiguredPeers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/99 Testing: NodeService.StorageIsIndependentPerNodeUntilRaftExists
+37/99 Test: NodeService.StorageIsIndependentPerNodeUntilRaftExists
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=NodeService.StorageIsIndependentPerNodeUntilRaftExists" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"NodeService.StorageIsIndependentPerNodeUntilRaftExists" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = NodeService.StorageIsIndependentPerNodeUntilRaftExists
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeService
+[ RUN      ] NodeService.StorageIsIndependentPerNodeUntilRaftExists
+[       OK ] NodeService.StorageIsIndependentPerNodeUntilRaftExists (8 ms)
+[----------] 1 test from NodeService (8 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (8 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"NodeService.StorageIsIndependentPerNodeUntilRaftExists" end time: Oct 10 20:51 UTC
+"NodeService.StorageIsIndependentPerNodeUntilRaftExists" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/99 Testing: NodeService.NodeToNodeCallCarriesSenderId
+38/99 Test: NodeService.NodeToNodeCallCarriesSenderId
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=NodeService.NodeToNodeCallCarriesSenderId" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"NodeService.NodeToNodeCallCarriesSenderId" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = NodeService.NodeToNodeCallCarriesSenderId
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeService
+[ RUN      ] NodeService.NodeToNodeCallCarriesSenderId
+[       OK ] NodeService.NodeToNodeCallCarriesSenderId (7 ms)
+[----------] 1 test from NodeService (8 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (8 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"NodeService.NodeToNodeCallCarriesSenderId" end time: Oct 10 20:51 UTC
+"NodeService.NodeToNodeCallCarriesSenderId" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/99 Testing: NodeService.PingRejectsOversizedRequestId
+39/99 Test: NodeService.PingRejectsOversizedRequestId
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=NodeService.PingRejectsOversizedRequestId" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"NodeService.PingRejectsOversizedRequestId" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = NodeService.PingRejectsOversizedRequestId
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeService
+[ RUN      ] NodeService.PingRejectsOversizedRequestId
+[       OK ] NodeService.PingRejectsOversizedRequestId (4 ms)
+[----------] 1 test from NodeService (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeService.PingRejectsOversizedRequestId" end time: Oct 10 20:51 UTC
+"NodeService.PingRejectsOversizedRequestId" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/99 Testing: NodeService.DeadPeerReportsUnavailable
+40/99 Test: NodeService.DeadPeerReportsUnavailable
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=NodeService.DeadPeerReportsUnavailable" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"NodeService.DeadPeerReportsUnavailable" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = NodeService.DeadPeerReportsUnavailable
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeService
+[ RUN      ] NodeService.DeadPeerReportsUnavailable
+[       OK ] NodeService.DeadPeerReportsUnavailable (4 ms)
+[----------] 1 test from NodeService (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeService.DeadPeerReportsUnavailable" end time: Oct 10 20:51 UTC
+"NodeService.DeadPeerReportsUnavailable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/99 Testing: NodeServer.StartingTwiceOnSamePortFailsClearly
+41/99 Test: NodeServer.StartingTwiceOnSamePortFailsClearly
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/rpc_tests" "--gtest_filter=NodeServer.StartingTwiceOnSamePortFailsClearly" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc
+"NodeServer.StartingTwiceOnSamePortFailsClearly" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = NodeServer.StartingTwiceOnSamePortFailsClearly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeServer
+[ RUN      ] NodeServer.StartingTwiceOnSamePortFailsClearly
+E1010 20:51:11.870095278    7724 chttp2_server.cc:1045]                UNKNOWN:No address added out of total 1 resolved for '0.0.0.0:41709' {file:"./src/core/ext/transport/chttp2/server/chttp2_server.cc", file_line:960, created_time:"2026-10-10T20:51:11.870003239+00:00", children:[UNKNOWN:Failed to add any wildcard listeners {file:"./src/core/lib/iomgr/tcp_server_posix.cc", file_line:353, created_time:"2026-10-10T20:51:11.869974888+00:00", children:[UNKNOWN:Unable to configure socket {file:"./src/core/lib/iomgr/tcp_server_utils_posix_common.cc", file_line:219, created_time:"2026-10-10T20:51:11.869896744+00:00", fd:9, children:[UNKNOWN:Address already in use {syscall:"bind", os_error:"Address already in use", errno:98, created_time:"2026-10-10T20:51:11.869865229+00:00", file_line:193, file:"./src/core/lib/iomgr/tcp_server_utils_posix_common.cc"}]}, UNKNOWN:Unable to configure socket {file:"./src/core/lib/iomgr/tcp_server_utils_posix_common.cc", file_line:219, created_time:"2026-10-10T20:51:11.869966337+00:00", fd:9, children:[UNKNOWN:Address already in use {syscall:"bind", os_error:"Address already in use", errno:98, created_time:"2026-10-10T20:51:11.869959743+00:00", file_line:193, file:"./src/core/lib/iomgr/tcp_server_utils_posix_common.cc"}]}]}]}
+[       OK ] NodeServer.StartingTwiceOnSamePortFailsClearly (3 ms)
+[----------] 1 test from NodeServer (3 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (3 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeServer.StartingTwiceOnSamePortFailsClearly" end time: Oct 10 20:51 UTC
+"NodeServer.StartingTwiceOnSamePortFailsClearly" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/99 Testing: ApiTest.PutThenGet
+42/99 Test: ApiTest.PutThenGet
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.PutThenGet" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.PutThenGet" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.PutThenGet
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.PutThenGet
+[       OK ] ApiTest.PutThenGet (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.PutThenGet" end time: Oct 10 20:51 UTC
+"ApiTest.PutThenGet" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/99 Testing: ApiTest.MissingKeyReturnsNullopt
+43/99 Test: ApiTest.MissingKeyReturnsNullopt
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.MissingKeyReturnsNullopt" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.MissingKeyReturnsNullopt" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.MissingKeyReturnsNullopt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.MissingKeyReturnsNullopt
+[       OK ] ApiTest.MissingKeyReturnsNullopt (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.MissingKeyReturnsNullopt" end time: Oct 10 20:51 UTC
+"ApiTest.MissingKeyReturnsNullopt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+44/99 Testing: ApiTest.OverwriteReturnsLatestValue
+44/99 Test: ApiTest.OverwriteReturnsLatestValue
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.OverwriteReturnsLatestValue" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.OverwriteReturnsLatestValue" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.OverwriteReturnsLatestValue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.OverwriteReturnsLatestValue
+[       OK ] ApiTest.OverwriteReturnsLatestValue (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.OverwriteReturnsLatestValue" end time: Oct 10 20:51 UTC
+"ApiTest.OverwriteReturnsLatestValue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/99 Testing: ApiTest.EmptyValueIsStoredNotMissing
+45/99 Test: ApiTest.EmptyValueIsStoredNotMissing
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.EmptyValueIsStoredNotMissing" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.EmptyValueIsStoredNotMissing" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.EmptyValueIsStoredNotMissing
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.EmptyValueIsStoredNotMissing
+[       OK ] ApiTest.EmptyValueIsStoredNotMissing (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.EmptyValueIsStoredNotMissing" end time: Oct 10 20:51 UTC
+"ApiTest.EmptyValueIsStoredNotMissing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/99 Testing: ApiTest.DeleteHidesKey
+46/99 Test: ApiTest.DeleteHidesKey
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.DeleteHidesKey" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.DeleteHidesKey" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.DeleteHidesKey
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.DeleteHidesKey
+[       OK ] ApiTest.DeleteHidesKey (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.DeleteHidesKey" end time: Oct 10 20:51 UTC
+"ApiTest.DeleteHidesKey" time elapsed: 00:00:00
+----------------------------------------------------------
+
+47/99 Testing: ApiTest.DeleteIsIdempotentAndWorksOnMissingKey
+47/99 Test: ApiTest.DeleteIsIdempotentAndWorksOnMissingKey
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.DeleteIsIdempotentAndWorksOnMissingKey" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.DeleteIsIdempotentAndWorksOnMissingKey" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.DeleteIsIdempotentAndWorksOnMissingKey
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.DeleteIsIdempotentAndWorksOnMissingKey
+[       OK ] ApiTest.DeleteIsIdempotentAndWorksOnMissingKey (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.DeleteIsIdempotentAndWorksOnMissingKey" end time: Oct 10 20:51 UTC
+"ApiTest.DeleteIsIdempotentAndWorksOnMissingKey" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/99 Testing: ApiTest.DeleteWritesATombstoneEvenForMissingKey
+48/99 Test: ApiTest.DeleteWritesATombstoneEvenForMissingKey
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.DeleteWritesATombstoneEvenForMissingKey" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.DeleteWritesATombstoneEvenForMissingKey" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.DeleteWritesATombstoneEvenForMissingKey
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.DeleteWritesATombstoneEvenForMissingKey
+[       OK ] ApiTest.DeleteWritesATombstoneEvenForMissingKey (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.DeleteWritesATombstoneEvenForMissingKey" end time: Oct 10 20:51 UTC
+"ApiTest.DeleteWritesATombstoneEvenForMissingKey" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/99 Testing: ApiTest.PutAfterDeleteResurrectsKey
+49/99 Test: ApiTest.PutAfterDeleteResurrectsKey
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.PutAfterDeleteResurrectsKey" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.PutAfterDeleteResurrectsKey" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.PutAfterDeleteResurrectsKey
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.PutAfterDeleteResurrectsKey
+[       OK ] ApiTest.PutAfterDeleteResurrectsKey (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.PutAfterDeleteResurrectsKey" end time: Oct 10 20:51 UTC
+"ApiTest.PutAfterDeleteResurrectsKey" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/99 Testing: ApiTest.SnapshotReadsSeeOldVersions
+50/99 Test: ApiTest.SnapshotReadsSeeOldVersions
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.SnapshotReadsSeeOldVersions" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.SnapshotReadsSeeOldVersions" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.SnapshotReadsSeeOldVersions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.SnapshotReadsSeeOldVersions
+[       OK ] ApiTest.SnapshotReadsSeeOldVersions (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.SnapshotReadsSeeOldVersions" end time: Oct 10 20:51 UTC
+"ApiTest.SnapshotReadsSeeOldVersions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+51/99 Testing: ApiTest.SequenceNumbersAreConsecutive
+51/99 Test: ApiTest.SequenceNumbersAreConsecutive
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.SequenceNumbersAreConsecutive" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.SequenceNumbersAreConsecutive" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.SequenceNumbersAreConsecutive
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.SequenceNumbersAreConsecutive
+[       OK ] ApiTest.SequenceNumbersAreConsecutive (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.SequenceNumbersAreConsecutive" end time: Oct 10 20:51 UTC
+"ApiTest.SequenceNumbersAreConsecutive" time elapsed: 00:00:00
+----------------------------------------------------------
+
+52/99 Testing: ApiTest.ManyKeysIndependent
+52/99 Test: ApiTest.ManyKeysIndependent
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.ManyKeysIndependent" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.ManyKeysIndependent" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.ManyKeysIndependent
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.ManyKeysIndependent
+[       OK ] ApiTest.ManyKeysIndependent (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.ManyKeysIndependent" end time: Oct 10 20:51 UTC
+"ApiTest.ManyKeysIndependent" time elapsed: 00:00:00
+----------------------------------------------------------
+
+53/99 Testing: ApiTest.RejectsNullMemTable
+53/99 Test: ApiTest.RejectsNullMemTable
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.RejectsNullMemTable" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.RejectsNullMemTable" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.RejectsNullMemTable
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.RejectsNullMemTable
+[       OK ] ApiTest.RejectsNullMemTable (0 ms)
+[----------] 1 test from ApiTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.RejectsNullMemTable" end time: Oct 10 20:51 UTC
+"ApiTest.RejectsNullMemTable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+54/99 Testing: ApiTest.ConcurrentWritersAndReaders
+54/99 Test: ApiTest.ConcurrentWritersAndReaders
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.ConcurrentWritersAndReaders" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.ConcurrentWritersAndReaders" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.ConcurrentWritersAndReaders
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.ConcurrentWritersAndReaders
+[       OK ] ApiTest.ConcurrentWritersAndReaders (7358 ms)
+[----------] 1 test from ApiTest (7358 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7358 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   7.36 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.ConcurrentWritersAndReaders" end time: Oct 10 20:51 UTC
+"ApiTest.ConcurrentWritersAndReaders" time elapsed: 00:00:07
+----------------------------------------------------------
+
+55/99 Testing: ApiTest.SnapshotIsStableWhileWritesContinue
+55/99 Test: ApiTest.SnapshotIsStableWhileWritesContinue
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=ApiTest.SnapshotIsStableWhileWritesContinue" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"ApiTest.SnapshotIsStableWhileWritesContinue" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ApiTest.SnapshotIsStableWhileWritesContinue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ApiTest
+[ RUN      ] ApiTest.SnapshotIsStableWhileWritesContinue
+[       OK ] ApiTest.SnapshotIsStableWhileWritesContinue (9 ms)
+[----------] 1 test from ApiTest (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (9 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ApiTest.SnapshotIsStableWhileWritesContinue" end time: Oct 10 20:51 UTC
+"ApiTest.SnapshotIsStableWhileWritesContinue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/99 Testing: Impls/MemTableContract.MissingKeyIsNotFound/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+56/99 Test: Impls/MemTableContract.MissingKeyIsNotFound/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=Impls/MemTableContract.MissingKeyIsNotFound/0" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"Impls/MemTableContract.MissingKeyIsNotFound/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Impls/MemTableContract.MissingKeyIsNotFound/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Impls/MemTableContract
+[ RUN      ] Impls/MemTableContract.MissingKeyIsNotFound/0
+[       OK ] Impls/MemTableContract.MissingKeyIsNotFound/0 (0 ms)
+[----------] 1 test from Impls/MemTableContract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Impls/MemTableContract.MissingKeyIsNotFound/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" end time: Oct 10 20:51 UTC
+"Impls/MemTableContract.MissingKeyIsNotFound/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" time elapsed: 00:00:00
+----------------------------------------------------------
+
+57/99 Testing: Impls/MemTableContract.InsertThenLookup/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+57/99 Test: Impls/MemTableContract.InsertThenLookup/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=Impls/MemTableContract.InsertThenLookup/0" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"Impls/MemTableContract.InsertThenLookup/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Impls/MemTableContract.InsertThenLookup/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Impls/MemTableContract
+[ RUN      ] Impls/MemTableContract.InsertThenLookup/0
+[       OK ] Impls/MemTableContract.InsertThenLookup/0 (0 ms)
+[----------] 1 test from Impls/MemTableContract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Impls/MemTableContract.InsertThenLookup/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" end time: Oct 10 20:51 UTC
+"Impls/MemTableContract.InsertThenLookup/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/99 Testing: Impls/MemTableContract.NewestVisibleVersionWins/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+58/99 Test: Impls/MemTableContract.NewestVisibleVersionWins/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=Impls/MemTableContract.NewestVisibleVersionWins/0" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"Impls/MemTableContract.NewestVisibleVersionWins/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Impls/MemTableContract.NewestVisibleVersionWins/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Impls/MemTableContract
+[ RUN      ] Impls/MemTableContract.NewestVisibleVersionWins/0
+[       OK ] Impls/MemTableContract.NewestVisibleVersionWins/0 (0 ms)
+[----------] 1 test from Impls/MemTableContract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Impls/MemTableContract.NewestVisibleVersionWins/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" end time: Oct 10 20:51 UTC
+"Impls/MemTableContract.NewestVisibleVersionWins/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" time elapsed: 00:00:00
+----------------------------------------------------------
+
+59/99 Testing: Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+59/99 Test: Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/0" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Impls/MemTableContract
+[ RUN      ] Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/0
+[       OK ] Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/0 (0 ms)
+[----------] 1 test from Impls/MemTableContract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" end time: Oct 10 20:51 UTC
+"Impls/MemTableContract.TombstoneHidesOlderValueButNotNewer/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/99 Testing: Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+60/99 Test: Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/0" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Impls/MemTableContract
+[ RUN      ] Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/0
+[       OK ] Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/0 (0 ms)
+[----------] 1 test from Impls/MemTableContract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" end time: Oct 10 20:51 UTC
+"Impls/MemTableContract.KeysAreIndependentAndPrefixSafe/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" time elapsed: 00:00:00
+----------------------------------------------------------
+
+61/99 Testing: Impls/MemTableContract.EmptyValueIsNotMissing/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+61/99 Test: Impls/MemTableContract.EmptyValueIsNotMissing/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=Impls/MemTableContract.EmptyValueIsNotMissing/0" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"Impls/MemTableContract.EmptyValueIsNotMissing/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Impls/MemTableContract.EmptyValueIsNotMissing/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Impls/MemTableContract
+[ RUN      ] Impls/MemTableContract.EmptyValueIsNotMissing/0
+[       OK ] Impls/MemTableContract.EmptyValueIsNotMissing/0 (0 ms)
+[----------] 1 test from Impls/MemTableContract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Impls/MemTableContract.EmptyValueIsNotMissing/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" end time: Oct 10 20:51 UTC
+"Impls/MemTableContract.EmptyValueIsNotMissing/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" time elapsed: 00:00:00
+----------------------------------------------------------
+
+62/99 Testing: Impls/MemTableContract.BinaryKeysAndValues/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+62/99 Test: Impls/MemTableContract.BinaryKeysAndValues/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=Impls/MemTableContract.BinaryKeysAndValues/0" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"Impls/MemTableContract.BinaryKeysAndValues/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Impls/MemTableContract.BinaryKeysAndValues/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Impls/MemTableContract
+[ RUN      ] Impls/MemTableContract.BinaryKeysAndValues/0
+[       OK ] Impls/MemTableContract.BinaryKeysAndValues/0 (0 ms)
+[----------] 1 test from Impls/MemTableContract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Impls/MemTableContract.BinaryKeysAndValues/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" end time: Oct 10 20:51 UTC
+"Impls/MemTableContract.BinaryKeysAndValues/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" time elapsed: 00:00:00
+----------------------------------------------------------
+
+63/99 Testing: Impls/MemTableContract.SizeAndCountGrow/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+63/99 Test: Impls/MemTableContract.SizeAndCountGrow/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_tests" "--gtest_filter=Impls/MemTableContract.SizeAndCountGrow/0" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"Impls/MemTableContract.SizeAndCountGrow/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Impls/MemTableContract.SizeAndCountGrow/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Impls/MemTableContract
+[ RUN      ] Impls/MemTableContract.SizeAndCountGrow/0
+[       OK ] Impls/MemTableContract.SizeAndCountGrow/0 (0 ms)
+[----------] 1 test from Impls/MemTableContract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Impls/MemTableContract.SizeAndCountGrow/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" end time: Oct 10 20:51 UTC
+"Impls/MemTableContract.SizeAndCountGrow/32-byte object <00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 20-BD 03-6E 74-5C 00-00 C0-BD 03-6E 74-5C 00-00>" time elapsed: 00:00:00
+----------------------------------------------------------
+
+64/99 Testing: GrpcApiTest.PutGetOverwriteDeleteFlow
+64/99 Test: GrpcApiTest.PutGetOverwriteDeleteFlow
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_grpc_tests" "--gtest_filter=GrpcApiTest.PutGetOverwriteDeleteFlow" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"GrpcApiTest.PutGetOverwriteDeleteFlow" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = GrpcApiTest.PutGetOverwriteDeleteFlow
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GrpcApiTest
+[ RUN      ] GrpcApiTest.PutGetOverwriteDeleteFlow
+[       OK ] GrpcApiTest.PutGetOverwriteDeleteFlow (6 ms)
+[----------] 1 test from GrpcApiTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"GrpcApiTest.PutGetOverwriteDeleteFlow" end time: Oct 10 20:51 UTC
+"GrpcApiTest.PutGetOverwriteDeleteFlow" time elapsed: 00:00:00
+----------------------------------------------------------
+
+65/99 Testing: GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected
+65/99 Test: GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/api_grpc_tests" "--gtest_filter=GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api
+"GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GrpcApiTest
+[ RUN      ] GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected
+[       OK ] GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected (4 ms)
+[----------] 1 test from GrpcApiTest (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected" end time: Oct 10 20:51 UTC
+"GrpcApiTest.MissingKeyIsNotFoundAndEmptyKeyIsRejected" time elapsed: 00:00:00
+----------------------------------------------------------
+
+66/99 Testing: RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase
+66/99 Test: RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase
+[       OK ] RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase" end time: Oct 10 20:51 UTC
+"RecoveryTest.MissingOrEmptyWalRecoversToEmptyDatabase" time elapsed: 00:00:00
+----------------------------------------------------------
+
+67/99 Testing: RecoveryTest.ReplayRestoresPutsInOrder
+67/99 Test: RecoveryTest.ReplayRestoresPutsInOrder
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.ReplayRestoresPutsInOrder" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.ReplayRestoresPutsInOrder" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.ReplayRestoresPutsInOrder
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.ReplayRestoresPutsInOrder
+[       OK ] RecoveryTest.ReplayRestoresPutsInOrder (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.ReplayRestoresPutsInOrder" end time: Oct 10 20:51 UTC
+"RecoveryTest.ReplayRestoresPutsInOrder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+68/99 Testing: RecoveryTest.NewWritesContinueFromRecoveredSequence
+68/99 Test: RecoveryTest.NewWritesContinueFromRecoveredSequence
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.NewWritesContinueFromRecoveredSequence" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.NewWritesContinueFromRecoveredSequence" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.NewWritesContinueFromRecoveredSequence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.NewWritesContinueFromRecoveredSequence
+[       OK ] RecoveryTest.NewWritesContinueFromRecoveredSequence (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.NewWritesContinueFromRecoveredSequence" end time: Oct 10 20:51 UTC
+"RecoveryTest.NewWritesContinueFromRecoveredSequence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+69/99 Testing: RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork
+69/99 Test: RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork
+[       OK ] RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork" end time: Oct 10 20:51 UTC
+"RecoveryTest.VersionsAndDeletesSurviveAndSnapshotsStillWork" time elapsed: 00:00:00
+----------------------------------------------------------
+
+70/99 Testing: RecoveryTest.EmptyValuesAndBinaryDataSurvive
+70/99 Test: RecoveryTest.EmptyValuesAndBinaryDataSurvive
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.EmptyValuesAndBinaryDataSurvive" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.EmptyValuesAndBinaryDataSurvive" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.EmptyValuesAndBinaryDataSurvive
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.EmptyValuesAndBinaryDataSurvive
+[       OK ] RecoveryTest.EmptyValuesAndBinaryDataSurvive (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.EmptyValuesAndBinaryDataSurvive" end time: Oct 10 20:51 UTC
+"RecoveryTest.EmptyValuesAndBinaryDataSurvive" time elapsed: 00:00:00
+----------------------------------------------------------
+
+71/99 Testing: RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped
+71/99 Test: RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped
+[       OK ] RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped" end time: Oct 10 20:51 UTC
+"RecoveryTest.RecordsAlreadyFlushedToSstablesAreSkipped" time elapsed: 00:00:00
+----------------------------------------------------------
+
+72/99 Testing: RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord
+72/99 Test: RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord
+[       OK ] RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord (6 ms)
+[----------] 1 test from RecoveryTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord" end time: Oct 10 20:51 UTC
+"RecoveryTest.CrashAtEveryByteOffsetRecoversLastCompleteRecord" time elapsed: 00:00:00
+----------------------------------------------------------
+
+73/99 Testing: RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks
+73/99 Test: RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks
+[       OK ] RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks" end time: Oct 10 20:51 UTC
+"RecoveryTest.TornTailIsDroppedThenAppendingAgainWorks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+74/99 Testing: RecoveryTest.DamagedLastRecordIsTreatedAsTornTail
+74/99 Test: RecoveryTest.DamagedLastRecordIsTreatedAsTornTail
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.DamagedLastRecordIsTreatedAsTornTail" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.DamagedLastRecordIsTreatedAsTornTail" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.DamagedLastRecordIsTreatedAsTornTail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.DamagedLastRecordIsTreatedAsTornTail
+[       OK ] RecoveryTest.DamagedLastRecordIsTreatedAsTornTail (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.DamagedLastRecordIsTreatedAsTornTail" end time: Oct 10 20:51 UTC
+"RecoveryTest.DamagedLastRecordIsTreatedAsTornTail" time elapsed: 00:00:00
+----------------------------------------------------------
+
+75/99 Testing: RecoveryTest.CorruptionBeforeTheEndRefusesToStart
+75/99 Test: RecoveryTest.CorruptionBeforeTheEndRefusesToStart
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.CorruptionBeforeTheEndRefusesToStart" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.CorruptionBeforeTheEndRefusesToStart" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.CorruptionBeforeTheEndRefusesToStart
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.CorruptionBeforeTheEndRefusesToStart
+[       OK ] RecoveryTest.CorruptionBeforeTheEndRefusesToStart (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.CorruptionBeforeTheEndRefusesToStart" end time: Oct 10 20:51 UTC
+"RecoveryTest.CorruptionBeforeTheEndRefusesToStart" time elapsed: 00:00:00
+----------------------------------------------------------
+
+76/99 Testing: RecoveryTest.NonIncreasingSequenceNumbersAreRejected
+76/99 Test: RecoveryTest.NonIncreasingSequenceNumbersAreRejected
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.NonIncreasingSequenceNumbersAreRejected" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.NonIncreasingSequenceNumbersAreRejected" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.NonIncreasingSequenceNumbersAreRejected
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.NonIncreasingSequenceNumbersAreRejected
+[       OK ] RecoveryTest.NonIncreasingSequenceNumbersAreRejected (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.NonIncreasingSequenceNumbersAreRejected" end time: Oct 10 20:51 UTC
+"RecoveryTest.NonIncreasingSequenceNumbersAreRejected" time elapsed: 00:00:00
+----------------------------------------------------------
+
+77/99 Testing: RecoveryTest.RecoverRequiresAnEmptyBackend
+77/99 Test: RecoveryTest.RecoverRequiresAnEmptyBackend
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.RecoverRequiresAnEmptyBackend" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.RecoverRequiresAnEmptyBackend" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.RecoverRequiresAnEmptyBackend
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.RecoverRequiresAnEmptyBackend
+[       OK ] RecoveryTest.RecoverRequiresAnEmptyBackend (0 ms)
+[----------] 1 test from RecoveryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.RecoverRequiresAnEmptyBackend" end time: Oct 10 20:51 UTC
+"RecoveryTest.RecoverRequiresAnEmptyBackend" time elapsed: 00:00:00
+----------------------------------------------------------
+
+78/99 Testing: RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts
+78/99 Test: RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests" "--gtest_filter=RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery
+"RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RecoveryTest
+[ RUN      ] RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts
+[       OK ] RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts (7 ms)
+[----------] 1 test from RecoveryTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (8 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts" end time: Oct 10 20:51 UTC
+"RecoveryTest.RandomWorkloadMatchesIndependentModelAcrossTwoRestarts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+79/99 Testing: LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable
+79/99 Test: LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable
+[       OK ] LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable (6 ms)
+[----------] 1 test from LifecycleTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable" end time: Oct 10 20:51 UTC
+"LifecycleTest.RotatesWhenThresholdReachedAndFlushesToTable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+80/99 Testing: LifecycleTest.NoRotationBelowThreshold
+80/99 Test: LifecycleTest.NoRotationBelowThreshold
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.NoRotationBelowThreshold" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.NoRotationBelowThreshold" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.NoRotationBelowThreshold
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.NoRotationBelowThreshold
+[       OK ] LifecycleTest.NoRotationBelowThreshold (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.NoRotationBelowThreshold" end time: Oct 10 20:51 UTC
+"LifecycleTest.NoRotationBelowThreshold" time elapsed: 00:00:00
+----------------------------------------------------------
+
+81/99 Testing: LifecycleTest.FlushOnEmptyStoreIsNoOp
+81/99 Test: LifecycleTest.FlushOnEmptyStoreIsNoOp
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.FlushOnEmptyStoreIsNoOp" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.FlushOnEmptyStoreIsNoOp" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.FlushOnEmptyStoreIsNoOp
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.FlushOnEmptyStoreIsNoOp
+[       OK ] LifecycleTest.FlushOnEmptyStoreIsNoOp (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.FlushOnEmptyStoreIsNoOp" end time: Oct 10 20:51 UTC
+"LifecycleTest.FlushOnEmptyStoreIsNoOp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+82/99 Testing: LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder
+82/99 Test: LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder
+[       OK ] LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder (1 ms)
+[----------] 1 test from LifecycleTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder" end time: Oct 10 20:51 UTC
+"LifecycleTest.OnFlushedReportsSequencesInIncreasingOrder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+83/99 Testing: LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning
+83/99 Test: LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning
+[       OK ] LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning" end time: Oct 10 20:51 UTC
+"LifecycleTest.ReadsSeeImmutableMemTableWhileFlushIsRunning" time elapsed: 00:00:00
+----------------------------------------------------------
+
+84/99 Testing: LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer
+84/99 Test: LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer
+[       OK ] LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer" end time: Oct 10 20:51 UTC
+"LifecycleTest.DeleteInNewerLayerHidesValueInOlderLayer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+85/99 Testing: LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues
+85/99 Test: LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues
+[       OK ] LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues (59 ms)
+[----------] 1 test from LifecycleTest (59 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (59 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues" end time: Oct 10 20:51 UTC
+"LifecycleTest.WriterStallsWhileFlushIsBlockedThenContinues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+86/99 Testing: LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters
+86/99 Test: LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters
+[       OK ] LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters" end time: Oct 10 20:51 UTC
+"LifecycleTest.FlushFailureKeepsDataReadableAndSurfacesToWriters" time elapsed: 00:00:00
+----------------------------------------------------------
+
+87/99 Testing: LifecycleTest.ConcurrentWritersAndReadersDuringFlushes
+87/99 Test: LifecycleTest.ConcurrentWritersAndReadersDuringFlushes
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.ConcurrentWritersAndReadersDuringFlushes" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.ConcurrentWritersAndReadersDuringFlushes" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.ConcurrentWritersAndReadersDuringFlushes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.ConcurrentWritersAndReadersDuringFlushes
+[       OK ] LifecycleTest.ConcurrentWritersAndReadersDuringFlushes (274 ms)
+[----------] 1 test from LifecycleTest (274 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (274 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.28 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.ConcurrentWritersAndReadersDuringFlushes" end time: Oct 10 20:51 UTC
+"LifecycleTest.ConcurrentWritersAndReadersDuringFlushes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+88/99 Testing: LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount
+88/99 Test: LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount
+[       OK ] LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount (53 ms)
+[----------] 1 test from LifecycleTest (53 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (53 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount" end time: Oct 10 20:51 UTC
+"LifecycleTest.CompactionIsScheduledAfterFlushesAndShrinksTableCount" time elapsed: 00:00:00
+----------------------------------------------------------
+
+89/99 Testing: LifecycleTest.ReadsStayCorrectWhileCompactionRuns
+89/99 Test: LifecycleTest.ReadsStayCorrectWhileCompactionRuns
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.ReadsStayCorrectWhileCompactionRuns" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.ReadsStayCorrectWhileCompactionRuns" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.ReadsStayCorrectWhileCompactionRuns
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.ReadsStayCorrectWhileCompactionRuns
+[       OK ] LifecycleTest.ReadsStayCorrectWhileCompactionRuns (88 ms)
+[----------] 1 test from LifecycleTest (88 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (88 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.ReadsStayCorrectWhileCompactionRuns" end time: Oct 10 20:51 UTC
+"LifecycleTest.ReadsStayCorrectWhileCompactionRuns" time elapsed: 00:00:00
+----------------------------------------------------------
+
+90/99 Testing: LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction
+90/99 Test: LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction
+[       OK ] LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction" end time: Oct 10 20:51 UTC
+"LifecycleTest.SnapshotKeepsOldVersionsAliveAcrossCompaction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+91/99 Testing: LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem
+91/99 Test: LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem
+[       OK ] LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem" end time: Oct 10 20:51 UTC
+"LifecycleTest.CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem" time elapsed: 00:00:00
+----------------------------------------------------------
+
+92/99 Testing: LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue
+92/99 Test: LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue
+[       OK ] LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue" end time: Oct 10 20:51 UTC
+"LifecycleTest.CompactionFailureStopsSchedulingButWritesContinue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+93/99 Testing: LifecycleTest.FilesAreCreatedReplacedAndCleanedUp
+93/99 Test: LifecycleTest.FilesAreCreatedReplacedAndCleanedUp
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.FilesAreCreatedReplacedAndCleanedUp" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.FilesAreCreatedReplacedAndCleanedUp" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.FilesAreCreatedReplacedAndCleanedUp
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.FilesAreCreatedReplacedAndCleanedUp
+[       OK ] LifecycleTest.FilesAreCreatedReplacedAndCleanedUp (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.FilesAreCreatedReplacedAndCleanedUp" end time: Oct 10 20:51 UTC
+"LifecycleTest.FilesAreCreatedReplacedAndCleanedUp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+94/99 Testing: LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone
+94/99 Test: LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone
+[       OK ] LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone" end time: Oct 10 20:51 UTC
+"LifecycleTest.ObsoleteFileSurvivesUntilLastReaderIsDone" time elapsed: 00:00:00
+----------------------------------------------------------
+
+95/99 Testing: LifecycleTest.FlushedDuringCompactionTableStaysNewer
+95/99 Test: LifecycleTest.FlushedDuringCompactionTableStaysNewer
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.FlushedDuringCompactionTableStaysNewer" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.FlushedDuringCompactionTableStaysNewer" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.FlushedDuringCompactionTableStaysNewer
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.FlushedDuringCompactionTableStaysNewer
+[       OK ] LifecycleTest.FlushedDuringCompactionTableStaysNewer (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.FlushedDuringCompactionTableStaysNewer" end time: Oct 10 20:51 UTC
+"LifecycleTest.FlushedDuringCompactionTableStaysNewer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+96/99 Testing: LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured
+96/99 Test: LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured
+[       OK ] LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured (0 ms)
+[----------] 1 test from LifecycleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured" end time: Oct 10 20:51 UTC
+"LifecycleTest.RestoreContinuesSequencesAndStartSequenceIsHonoured" time elapsed: 00:00:00
+----------------------------------------------------------
+
+97/99 Testing: LifecycleTest.DestructorDoesNotHangWithPendingWork
+97/99 Test: LifecycleTest.DestructorDoesNotHangWithPendingWork
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=LifecycleTest.DestructorDoesNotHangWithPendingWork" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"LifecycleTest.DestructorDoesNotHangWithPendingWork" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = LifecycleTest.DestructorDoesNotHangWithPendingWork
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LifecycleTest
+[ RUN      ] LifecycleTest.DestructorDoesNotHangWithPendingWork
+[       OK ] LifecycleTest.DestructorDoesNotHangWithPendingWork (2 ms)
+[----------] 1 test from LifecycleTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LifecycleTest.DestructorDoesNotHangWithPendingWork" end time: Oct 10 20:51 UTC
+"LifecycleTest.DestructorDoesNotHangWithPendingWork" time elapsed: 00:00:00
+----------------------------------------------------------
+
+98/99 Testing: FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything
+98/99 Test: FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FlowTest
+[ RUN      ] FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything
+[       OK ] FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything (4 ms)
+[----------] 1 test from FlowTest (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything" end time: Oct 10 20:51 UTC
+"FlowTest.CrashAfterFlushesAndCompactionsRecoversEverything" time elapsed: 00:00:00
+----------------------------------------------------------
+
+99/99 Testing: FlowTest.RecoveryAlsoWorksWithEmptyTables
+99/99 Test: FlowTest.RecoveryAlsoWorksWithEmptyTables
+Command: "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests" "--gtest_filter=FlowTest.RecoveryAlsoWorksWithEmptyTables" "--gtest_also_run_disabled_tests"
+Directory: /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle
+"FlowTest.RecoveryAlsoWorksWithEmptyTables" start time: Oct 10 20:51 UTC
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = FlowTest.RecoveryAlsoWorksWithEmptyTables
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FlowTest
+[ RUN      ] FlowTest.RecoveryAlsoWorksWithEmptyTables
+[       OK ] FlowTest.RecoveryAlsoWorksWithEmptyTables (0 ms)
+[----------] 1 test from FlowTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FlowTest.RecoveryAlsoWorksWithEmptyTables" end time: Oct 10 20:51 UTC
+"FlowTest.RecoveryAlsoWorksWithEmptyTables" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 20:51 UTC

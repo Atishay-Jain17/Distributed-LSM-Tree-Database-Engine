@@ -1,0 +1,77 @@
+{
+  "tests": 13,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "RecoveryTest",
+      "tests": 13,
+      "testsuite": [
+        {
+          "name": "MissingOrEmptyWalRecoversToEmptyDatabase",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 76
+        },
+        {
+          "name": "ReplayRestoresPutsInOrder",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 85
+        },
+        {
+          "name": "NewWritesContinueFromRecoveredSequence",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 97
+        },
+        {
+          "name": "VersionsAndDeletesSurviveAndSnapshotsStillWork",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 107
+        },
+        {
+          "name": "EmptyValuesAndBinaryDataSurvive",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 121
+        },
+        {
+          "name": "RecordsAlreadyFlushedToSstablesAreSkipped",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 132
+        },
+        {
+          "name": "CrashAtEveryByteOffsetRecoversLastCompleteRecord",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 147
+        },
+        {
+          "name": "TornTailIsDroppedThenAppendingAgainWorks",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 179
+        },
+        {
+          "name": "DamagedLastRecordIsTreatedAsTornTail",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 205
+        },
+        {
+          "name": "CorruptionBeforeTheEndRefusesToStart",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 218
+        },
+        {
+          "name": "NonIncreasingSequenceNumbersAreRejected",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 229
+        },
+        {
+          "name": "RecoverRequiresAnEmptyBackend",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 236
+        },
+        {
+          "name": "RandomWorkloadMatchesIndependentModelAcrossTwoRestarts",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/recovery\/recovery_test.cpp",
+          "line": 246
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/proto/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/rpc/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/rpc/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/api/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/api/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/recovery/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/lifecycle/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
