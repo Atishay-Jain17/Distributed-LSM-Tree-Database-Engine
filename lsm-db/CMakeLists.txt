@@ -17,3 +17,7 @@ enable_testing()
 add_subdirectory(proto)
 add_subdirectory(rpc)
 add_subdirectory(tests/rpc)
+
+# --- Week 2 (Suhani): single-node storage API over a MemTable.
+add_subdirectory(api)
+add_subdirectory(tests/api)
