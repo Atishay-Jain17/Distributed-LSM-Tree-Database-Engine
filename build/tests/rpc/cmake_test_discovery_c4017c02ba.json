@@ -1,0 +1,259 @@
+{
+  "tests": 41,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "Validation",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "AcceptsTypicalPut",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/validation_test.cpp",
+          "line": 20
+        },
+        {
+          "name": "RejectsEmptyKey",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/validation_test.cpp",
+          "line": 24
+        },
+        {
+          "name": "KeyLengthBoundary",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/validation_test.cpp",
+          "line": 30
+        },
+        {
+          "name": "ValueLengthBoundaryAndEmptyValueAllowed",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/validation_test.cpp",
+          "line": 36
+        },
+        {
+          "name": "RequestIdTooLongRejectedForEveryRequestType",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/validation_test.cpp",
+          "line": 43
+        },
+        {
+          "name": "MissingMetaIsAllowed",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/validation_test.cpp",
+          "line": 58
+        },
+        {
+          "name": "GetAndDeleteRejectEmptyKey",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/validation_test.cpp",
+          "line": 64
+        },
+        {
+          "name": "BinaryKeysWithNulBytesAreValid",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/validation_test.cpp",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "name": "Serialization",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "PutRequestPreservesBinaryKeyAndValue",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/serialization_test.cpp",
+          "line": 21
+        },
+        {
+          "name": "LargeValueRoundTrip",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/serialization_test.cpp",
+          "line": 37
+        },
+        {
+          "name": "DefaultStatusIsOk",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/serialization_test.cpp",
+          "line": 44
+        },
+        {
+          "name": "NotLeaderStatusCarriesLeaderHint",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/serialization_test.cpp",
+          "line": 51
+        },
+        {
+          "name": "NodeToNodePingAndInfoMessages",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/serialization_test.cpp",
+          "line": 67
+        },
+        {
+          "name": "GarbageBytesAreRejected",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/serialization_test.cpp",
+          "line": 88
+        },
+        {
+          "name": "UnknownFieldsFromNewerPeersAreIgnored",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/serialization_test.cpp",
+          "line": 93
+        },
+        {
+          "name": "StatusCodeNumbersAreFrozen",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/serialization_test.cpp",
+          "line": 108
+        }
+      ]
+    },
+    {
+      "name": "ParsePeers",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "ParsesTwoPeers",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_options_test.cpp",
+          "line": 10
+        },
+        {
+          "name": "EmptyMeansNoPeers",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_options_test.cpp",
+          "line": 19
+        },
+        {
+          "name": "RejectsMalformedInput",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_options_test.cpp",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "name": "ValidateNodeOptions",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "AcceptsGoodOptions",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_options_test.cpp",
+          "line": 31
+        },
+        {
+          "name": "RejectsBadOptions",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_options_test.cpp",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "name": "KvServiceTest",
+      "tests": 11,
+      "testsuite": [
+        {
+          "name": "PutThenGet",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 56
+        },
+        {
+          "name": "OverwriteReturnsLatestValue",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 63
+        },
+        {
+          "name": "MissingKeyIsNotFoundNotAnError",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 69
+        },
+        {
+          "name": "DeleteRemovesKeyAndIsIdempotent",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 75
+        },
+        {
+          "name": "EmptyValueRoundTrips",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 83
+        },
+        {
+          "name": "BinaryKeysAndValuesSurviveTheWire",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 90
+        },
+        {
+          "name": "InvalidRequestsNeverReachStorage",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 96
+        },
+        {
+          "name": "MaxSizeValueIsAccepted",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 109
+        },
+        {
+          "name": "MessageAboveTransportLimitMapsToInvalidArgument",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 115
+        },
+        {
+          "name": "OversizedRequestIdIsRejectedByServer",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 122
+        },
+        {
+          "name": "ConcurrentClientsDoNotLoseWrites",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 134
+        }
+      ]
+    },
+    {
+      "name": "KvServiceFailure",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "StorageExceptionBecomesInternalStatus",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 158
+        },
+        {
+          "name": "DeadNodeReportsUnavailable",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/kv_service_test.cpp",
+          "line": 168
+        }
+      ]
+    },
+    {
+      "name": "NodeService",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "ThreeNodesHaveDistinctIdentitiesAndPorts",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_service_test.cpp",
+          "line": 15
+        },
+        {
+          "name": "GetNodeInfoReturnsSelfAndConfiguredPeers",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_service_test.cpp",
+          "line": 32
+        },
+        {
+          "name": "StorageIsIndependentPerNodeUntilRaftExists",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_service_test.cpp",
+          "line": 42
+        },
+        {
+          "name": "NodeToNodeCallCarriesSenderId",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_service_test.cpp",
+          "line": 49
+        },
+        {
+          "name": "PingRejectsOversizedRequestId",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_service_test.cpp",
+          "line": 58
+        },
+        {
+          "name": "DeadPeerReportsUnavailable",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_service_test.cpp",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "name": "NodeServer",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "StartingTwiceOnSamePortFailsClearly",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/rpc\/node_service_test.cpp",
+          "line": 81
+        }
+      ]
+    }
+  ]
+}

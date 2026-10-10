@@ -4,10 +4,12 @@
 
 namespace lsmdb::recovery {
 
-RecoveryStats Recover(WalReader& wal, api::MemTableBackend& backend,
+RecoveryStats Recover(WalReader& wal, api::RestoreTarget& backend,
                       api::SequenceNumber flushed_up_to) {
   RecoveryStats stats;
-  if (backend.LastSequence() != 0) throw RecoveryError("Recover: backend is not empty");
+  // A store opened after SSTable recovery already reports the flushed sequence; anything
+  // beyond that means it has been written to and must not be recovered into.
+  if (backend.LastSequence() > flushed_up_to) throw RecoveryError("Recover: backend is not empty");
   stats.last_sequence = flushed_up_to;  // SSTables already cover this much
 
   api::SequenceNumber prev = 0;

@@ -25,3 +25,7 @@ add_subdirectory(tests/api)
 # --- Week 3 (Suhani): startup recovery (WAL replay into the MemTable).
 add_subdirectory(recovery)
 add_subdirectory(tests/recovery)
+
+# --- Week 4 (Suhani): MemTable rotation, flush worker, compaction scheduling.
+add_subdirectory(lifecycle)
+add_subdirectory(tests/lifecycle)

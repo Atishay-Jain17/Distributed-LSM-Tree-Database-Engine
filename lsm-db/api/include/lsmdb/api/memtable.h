@@ -10,6 +10,8 @@
 // Thread safety: Add() and Get() may be called concurrently from many threads.
 #include <cstddef>
 #include <cstdint>
+#include <functional>
+#include <stdexcept>
 #include <string>
 
 namespace lsmdb::api {
@@ -30,6 +32,10 @@ struct LookupResult {
   SequenceNumber sequence = 0;     // sequence of the entry that decided the result
 };
 
+// Called once per stored entry by MemTable::ForEach.
+using EntryVisitor = std::function<void(SequenceNumber seq, ValueType type, const std::string& key,
+                                        const std::string& value)>;
+
 class MemTable {
  public:
   virtual ~MemTable() = default;
@@ -45,6 +51,15 @@ class MemTable {
   // For the future flush threshold (Atishay, Week 2 Tue).
   virtual std::size_t ApproximateMemoryUsage() const = 0;
   virtual std::size_t EntryCount() const = 0;
+
+  // Visits EVERY entry (all versions, tombstones included) ordered by key ascending, then
+  // sequence DESCENDING. Used by the flush worker (Week 4) to write an SSTable from a MemTable
+  // that is no longer being written to. Not required for the API layer, so the default throws;
+  // the SkipList MemTable must implement it before it can be flushed.
+  virtual void ForEach(const EntryVisitor& visit) const {
+    (void)visit;
+    throw std::logic_error("this MemTable does not support ForEach (needed for flushing)");
+  }
 };
 
 }  // namespace lsmdb::api

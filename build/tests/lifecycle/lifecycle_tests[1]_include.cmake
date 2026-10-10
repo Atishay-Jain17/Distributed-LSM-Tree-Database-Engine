@@ -1,0 +1,5 @@
+if(EXISTS "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests[1]_tests.cmake")
+  include("/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/lifecycle_tests[1]_tests.cmake")
+else()
+  add_test(lifecycle_tests_NOT_BUILT lifecycle_tests_NOT_BUILT)
+endif()

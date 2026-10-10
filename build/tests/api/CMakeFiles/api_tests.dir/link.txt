@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/api_tests.dir/link.d CMakeFiles/api_tests.dir/memtable_test.cpp.o CMakeFiles/api_tests.dir/memtable_backend_test.cpp.o -o api_tests  ../../api/liblsmdb_api.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a

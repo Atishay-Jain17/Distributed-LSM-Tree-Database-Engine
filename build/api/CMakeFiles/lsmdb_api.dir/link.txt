@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsmdb_api.a CMakeFiles/lsmdb_api.dir/src/reference_memtable.cpp.o CMakeFiles/lsmdb_api.dir/src/memtable_backend.cpp.o
+/usr/bin/ranlib liblsmdb_api.a

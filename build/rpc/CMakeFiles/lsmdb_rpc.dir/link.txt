@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsmdb_rpc.a CMakeFiles/lsmdb_rpc.dir/src/status.cpp.o CMakeFiles/lsmdb_rpc.dir/src/validation.cpp.o CMakeFiles/lsmdb_rpc.dir/src/in_memory_backend.cpp.o CMakeFiles/lsmdb_rpc.dir/src/kv_service_impl.cpp.o CMakeFiles/lsmdb_rpc.dir/src/node_service_impl.cpp.o CMakeFiles/lsmdb_rpc.dir/src/node_options.cpp.o CMakeFiles/lsmdb_rpc.dir/src/node_server.cpp.o CMakeFiles/lsmdb_rpc.dir/src/clients.cpp.o
+/usr/bin/ranlib liblsmdb_rpc.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsmdb_lifecycle.a CMakeFiles/lsmdb_lifecycle.dir/src/lsm_store.cpp.o CMakeFiles/lsmdb_lifecycle.dir/src/reference_table_store.cpp.o
+/usr/bin/ranlib liblsmdb_lifecycle.a

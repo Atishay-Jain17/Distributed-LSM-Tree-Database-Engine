@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsmdb_recovery.a CMakeFiles/lsmdb_recovery.dir/src/recovery.cpp.o CMakeFiles/lsmdb_recovery.dir/src/reference_wal.cpp.o
+/usr/bin/ranlib liblsmdb_recovery.a

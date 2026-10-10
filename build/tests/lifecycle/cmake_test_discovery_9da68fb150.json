@@ -1,0 +1,123 @@
+{
+  "tests": 21,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "LifecycleTest",
+      "tests": 19,
+      "testsuite": [
+        {
+          "name": "RotatesWhenThresholdReachedAndFlushesToTable",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 101
+        },
+        {
+          "name": "NoRotationBelowThreshold",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 114
+        },
+        {
+          "name": "FlushOnEmptyStoreIsNoOp",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 123
+        },
+        {
+          "name": "OnFlushedReportsSequencesInIncreasingOrder",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 130
+        },
+        {
+          "name": "ReadsSeeImmutableMemTableWhileFlushIsRunning",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 147
+        },
+        {
+          "name": "DeleteInNewerLayerHidesValueInOlderLayer",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 163
+        },
+        {
+          "name": "WriterStallsWhileFlushIsBlockedThenContinues",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 176
+        },
+        {
+          "name": "FlushFailureKeepsDataReadableAndSurfacesToWriters",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 200
+        },
+        {
+          "name": "ConcurrentWritersAndReadersDuringFlushes",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 212
+        },
+        {
+          "name": "CompactionIsScheduledAfterFlushesAndShrinksTableCount",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 259
+        },
+        {
+          "name": "ReadsStayCorrectWhileCompactionRuns",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 270
+        },
+        {
+          "name": "SnapshotKeepsOldVersionsAliveAcrossCompaction",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 315
+        },
+        {
+          "name": "CompactionDropsDeletedKeysOnceNoSnapshotNeedsThem",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 337
+        },
+        {
+          "name": "CompactionFailureStopsSchedulingButWritesContinue",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 350
+        },
+        {
+          "name": "FilesAreCreatedReplacedAndCleanedUp",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 367
+        },
+        {
+          "name": "ObsoleteFileSurvivesUntilLastReaderIsDone",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 387
+        },
+        {
+          "name": "FlushedDuringCompactionTableStaysNewer",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 407
+        },
+        {
+          "name": "RestoreContinuesSequencesAndStartSequenceIsHonoured",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 425
+        },
+        {
+          "name": "DestructorDoesNotHangWithPendingWork",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/lifecycle_test.cpp",
+          "line": 441
+        }
+      ]
+    },
+    {
+      "name": "FlowTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "CrashAfterFlushesAndCompactionsRecoversEverything",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/single_node_flow_test.cpp",
+          "line": 41
+        },
+        {
+          "name": "RecoveryAlsoWorksWithEmptyTables",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/lifecycle\/single_node_flow_test.cpp",
+          "line": 99
+        }
+      ]
+    }
+  ]
+}

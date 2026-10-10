@@ -19,11 +19,12 @@
 #include <string>
 
 #include "lsmdb/api/memtable.h"
+#include "lsmdb/api/restore_target.h"
 #include "lsmdb/rpc/storage_backend.h"
 
 namespace lsmdb::api {
 
-class MemTableBackend : public rpc::StorageBackend {
+class MemTableBackend : public rpc::StorageBackend, public RestoreTarget {
  public:
   explicit MemTableBackend(std::shared_ptr<MemTable> memtable);
 
@@ -32,7 +33,7 @@ class MemTableBackend : public rpc::StorageBackend {
   void Delete(const std::string& key) override;
 
   // MVCC helpers (Sarthak's versioning work, Weeks 2-4 read paths).
-  SequenceNumber LastSequence() const { return last_visible_.load(std::memory_order_acquire); }
+  SequenceNumber LastSequence() const override { return last_visible_.load(std::memory_order_acquire); }
   // Read as of `read_seq`; use LastSequence() captured earlier for a stable snapshot.
   LookupResult GetAt(const std::string& key, SequenceNumber read_seq) const;
 
@@ -41,7 +42,7 @@ class MemTableBackend : public rpc::StorageBackend {
   // be increasing (gaps are fine: records already flushed to SSTables are skipped). Afterwards
   // new writes continue from the highest restored sequence + 1.
   void Restore(SequenceNumber seq, ValueType type, const std::string& key,
-               const std::string& value);
+               const std::string& value) override;
 
   const MemTable& memtable() const { return *memtable_; }
 

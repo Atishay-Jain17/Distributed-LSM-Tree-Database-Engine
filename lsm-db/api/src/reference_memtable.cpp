@@ -40,4 +40,9 @@ std::size_t ReferenceMemTable::EntryCount() const {
   return entries_.size();
 }
 
+void ReferenceMemTable::ForEach(const EntryVisitor& visit) const {
+  std::shared_lock lock(mu_);  // map order is already (key asc, seq desc)
+  for (const auto& [k, e] : entries_) visit(k.second, e.type, k.first, e.value);
+}
+
 }  // namespace lsmdb::api

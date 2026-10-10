@@ -18,6 +18,7 @@ class ReferenceMemTable : public MemTable {
   LookupResult Get(const std::string& key, SequenceNumber read_seq) const override;
   std::size_t ApproximateMemoryUsage() const override;
   std::size_t EntryCount() const override;
+  void ForEach(const EntryVisitor& visit) const override;
 
  private:
   // Ordered by key ascending, then sequence DESCENDING, so the first entry at or

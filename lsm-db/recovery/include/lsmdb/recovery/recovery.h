@@ -4,6 +4,7 @@
 #include <stdexcept>
 
 #include "lsmdb/api/memtable_backend.h"
+#include "lsmdb/api/restore_target.h"
 #include "lsmdb/recovery/wal_reader.h"
 
 namespace lsmdb::recovery {
@@ -21,11 +22,12 @@ struct RecoveryStats {
   std::uint64_t valid_wal_bytes = 0;        // truncate the WAL to this before appending
 };
 
-// Replays `wal` into `backend` (which must be empty and not yet serving).
+// Replays `wal` into `backend` (which must not have data newer than `flushed_up_to`, and must not be
+// serving yet).
 //  * records with sequence <= flushed_up_to are skipped: SSTables already hold them
 //  * a torn final record is dropped (recorded in stats), the rest is applied
 //  * corruption before the end of the log, or non-increasing sequence numbers, throw RecoveryError
-RecoveryStats Recover(WalReader& wal, api::MemTableBackend& backend,
+RecoveryStats Recover(WalReader& wal, api::RestoreTarget& backend,
                       api::SequenceNumber flushed_up_to = 0);
 
 }  // namespace lsmdb::recovery
