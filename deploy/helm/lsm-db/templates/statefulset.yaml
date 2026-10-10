@@ -24,10 +24,35 @@ spec:
       labels:
         app.kubernetes.io/name: lsm-db
     spec:
+      terminationGracePeriodSeconds: 10
+      securityContext:
+        fsGroup: 10001   # real node image runs as uid 10001; lets it write to /data
       containers:
         - name: lsm-db-node
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          # Translate the injected values into the variables the REAL lsmdb_node reads
+          # (see lsm-db/docs/rpc-contract.md): numeric 1-based node id, advertised DNS
+          # name, and peers as "id=host:port" WITHOUT this node. The placeholder ignores them.
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              ORD="${POD_NAME##*-}"
+              export LSMDB_NODE_ID=$((ORD + 1))
+              export LSMDB_PORT="${NODE_PORT}"
+              export LSMDB_ADVERTISE_HOST="${POD_NAME}.{{ .Release.Name }}-headless"
+              export LSMDB_DATA_DIR=/data
+              PEERS_OUT=""
+              i=0
+              while [ "$i" -lt {{ .Values.replicaCount }} ]; do
+                if [ "$i" -ne "$ORD" ]; then
+                  PEERS_OUT="${PEERS_OUT:+$PEERS_OUT,}$((i + 1))={{ .Release.Name }}-$i.{{ .Release.Name }}-headless:{{ .Values.node.port }}"
+                fi
+                i=$((i + 1))
+              done
+              export LSMDB_PEERS="$PEERS_OUT"
+              echo "node_id=$LSMDB_NODE_ID peers=$LSMDB_PEERS"
+              exec /app/node
           ports:
             - containerPort: {{ .Values.node.port }}
               name: node-port

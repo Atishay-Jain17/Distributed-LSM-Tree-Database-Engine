@@ -16,6 +16,7 @@ metadata:
     app.kubernetes.io/name: lsm-db
 spec:
   clusterIP: None
+  publishNotReadyAddresses: true   # peers must resolve each other before they are Ready
   selector:
     app.kubernetes.io/name: lsm-db
   ports:

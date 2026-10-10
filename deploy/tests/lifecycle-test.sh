@@ -9,6 +9,8 @@ set -euo pipefail
 
 RELEASE_NAME="lsm-db"
 TARGET_POD="${RELEASE_NAME}-1"   # test the middle node
+cleanup() { kubectl exec "$TARGET_POD" -- rm -f /data/marker.txt 2>/dev/null || true; }
+trap cleanup EXIT
 
 echo "== 1. Write a marker file into the target pod's persistent volume =="
 kubectl exec "$TARGET_POD" -- sh -c 'echo "lifecycle-test-marker" > /data/marker.txt'
