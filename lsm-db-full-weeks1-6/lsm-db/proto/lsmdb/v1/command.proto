@@ -1,0 +1,18 @@
+// The payload stored in each Raft log entry. Every node decodes the SAME bytes and
+// applies the SAME command at the SAME log index, which is what keeps replicas identical.
+// Owner: Vinayak (write path). The Raft log (Atishay/Sarthak) treats it as opaque bytes.
+syntax = "proto3";
+
+package lsmdb.v1;
+
+enum CommandType {
+  COMMAND_TYPE_UNSPECIFIED = 0;  // never valid; protects against empty/garbage payloads
+  COMMAND_TYPE_PUT = 1;
+  COMMAND_TYPE_DELETE = 2;
+}
+
+message ReplicatedCommand {
+  CommandType type = 1;
+  bytes key = 2;
+  bytes value = 3;  // empty for DELETE
+}

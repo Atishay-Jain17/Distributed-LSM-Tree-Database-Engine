@@ -1,0 +1,2 @@
+add_executable(memtable_contention memtable_contention.cpp)
+target_link_libraries(memtable_contention PRIVATE lsmdb_storage)
