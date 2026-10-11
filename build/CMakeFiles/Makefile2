@@ -72,6 +72,8 @@ all: recovery/all
 all: tests/recovery/all
 all: lifecycle/all
 all: tests/lifecycle/all
+all: consensus/all
+all: tests/consensus/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -84,6 +86,8 @@ codegen: recovery/codegen
 codegen: tests/recovery/codegen
 codegen: lifecycle/codegen
 codegen: tests/lifecycle/codegen
+codegen: consensus/codegen
+codegen: tests/consensus/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -96,6 +100,8 @@ preinstall: recovery/preinstall
 preinstall: tests/recovery/preinstall
 preinstall: lifecycle/preinstall
 preinstall: tests/lifecycle/preinstall
+preinstall: consensus/preinstall
+preinstall: tests/consensus/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -108,6 +114,8 @@ clean: recovery/clean
 clean: tests/recovery/clean
 clean: lifecycle/clean
 clean: tests/lifecycle/clean
+clean: consensus/clean
+clean: tests/consensus/clean
 .PHONY : clean
 
 #=============================================================================
@@ -128,6 +136,25 @@ api/preinstall:
 # Recursive "clean" directory target.
 api/clean: api/CMakeFiles/lsmdb_api.dir/clean
 .PHONY : api/clean
+
+#=============================================================================
+# Directory level rules for directory consensus
+
+# Recursive "all" directory target.
+consensus/all: consensus/CMakeFiles/lsmdb_consensus.dir/all
+.PHONY : consensus/all
+
+# Recursive "codegen" directory target.
+consensus/codegen: consensus/CMakeFiles/lsmdb_consensus.dir/codegen
+.PHONY : consensus/codegen
+
+# Recursive "preinstall" directory target.
+consensus/preinstall:
+.PHONY : consensus/preinstall
+
+# Recursive "clean" directory target.
+consensus/clean: consensus/CMakeFiles/lsmdb_consensus.dir/clean
+.PHONY : consensus/clean
 
 #=============================================================================
 # Directory level rules for directory lifecycle
@@ -234,6 +261,28 @@ tests/api/clean: tests/api/CMakeFiles/api_grpc_tests.dir/clean
 .PHONY : tests/api/clean
 
 #=============================================================================
+# Directory level rules for directory tests/consensus
+
+# Recursive "all" directory target.
+tests/consensus/all: tests/consensus/CMakeFiles/consensus_tests.dir/all
+tests/consensus/all: tests/consensus/CMakeFiles/consensus_grpc_tests.dir/all
+.PHONY : tests/consensus/all
+
+# Recursive "codegen" directory target.
+tests/consensus/codegen: tests/consensus/CMakeFiles/consensus_tests.dir/codegen
+tests/consensus/codegen: tests/consensus/CMakeFiles/consensus_grpc_tests.dir/codegen
+.PHONY : tests/consensus/codegen
+
+# Recursive "preinstall" directory target.
+tests/consensus/preinstall:
+.PHONY : tests/consensus/preinstall
+
+# Recursive "clean" directory target.
+tests/consensus/clean: tests/consensus/CMakeFiles/consensus_tests.dir/clean
+tests/consensus/clean: tests/consensus/CMakeFiles/consensus_grpc_tests.dir/clean
+.PHONY : tests/consensus/clean
+
+#=============================================================================
 # Directory level rules for directory tests/lifecycle
 
 # Recursive "all" directory target.
@@ -297,7 +346,7 @@ tests/rpc/clean: tests/rpc/CMakeFiles/rpc_tests.dir/clean
 proto/CMakeFiles/lsmdb_proto.dir/all:
 	$(MAKE) $(MAKESILENT) -f proto/CMakeFiles/lsmdb_proto.dir/build.make proto/CMakeFiles/lsmdb_proto.dir/depend
 	$(MAKE) $(MAKESILENT) -f proto/CMakeFiles/lsmdb_proto.dir/build.make proto/CMakeFiles/lsmdb_proto.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26,27,28 "Built target lsmdb_proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38 "Built target lsmdb_proto"
 .PHONY : proto/CMakeFiles/lsmdb_proto.dir/all
 
 # Build rule for subdir invocation for target.
@@ -314,7 +363,7 @@ lsmdb_proto: proto/CMakeFiles/lsmdb_proto.dir/rule
 # codegen rule for target.
 proto/CMakeFiles/lsmdb_proto.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f proto/CMakeFiles/lsmdb_proto.dir/build.make proto/CMakeFiles/lsmdb_proto.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26,27,28 "Finished codegen for target lsmdb_proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38 "Finished codegen for target lsmdb_proto"
 .PHONY : proto/CMakeFiles/lsmdb_proto.dir/codegen
 
 # clean rule for target.
@@ -329,7 +378,7 @@ proto/CMakeFiles/lsmdb_proto.dir/clean:
 rpc/CMakeFiles/lsmdb_rpc.dir/all: proto/CMakeFiles/lsmdb_proto.dir/all
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/lsmdb_rpc.dir/build.make rpc/CMakeFiles/lsmdb_rpc.dir/depend
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/lsmdb_rpc.dir/build.make rpc/CMakeFiles/lsmdb_rpc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=32,33,34,35,36,37,38,39,40 "Built target lsmdb_rpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=42,43,44,45,46,47,48,49,50 "Built target lsmdb_rpc"
 .PHONY : rpc/CMakeFiles/lsmdb_rpc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -346,7 +395,7 @@ lsmdb_rpc: rpc/CMakeFiles/lsmdb_rpc.dir/rule
 # codegen rule for target.
 rpc/CMakeFiles/lsmdb_rpc.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/lsmdb_rpc.dir/build.make rpc/CMakeFiles/lsmdb_rpc.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=32,33,34,35,36,37,38,39,40 "Finished codegen for target lsmdb_rpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=42,43,44,45,46,47,48,49,50 "Finished codegen for target lsmdb_rpc"
 .PHONY : rpc/CMakeFiles/lsmdb_rpc.dir/codegen
 
 # clean rule for target.
@@ -362,7 +411,7 @@ rpc/CMakeFiles/lsmdb_node.dir/all: proto/CMakeFiles/lsmdb_proto.dir/all
 rpc/CMakeFiles/lsmdb_node.dir/all: rpc/CMakeFiles/lsmdb_rpc.dir/all
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/lsmdb_node.dir/build.make rpc/CMakeFiles/lsmdb_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/lsmdb_node.dir/build.make rpc/CMakeFiles/lsmdb_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=17,18 "Built target lsmdb_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=27,28 "Built target lsmdb_node"
 .PHONY : rpc/CMakeFiles/lsmdb_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -379,7 +428,7 @@ lsmdb_node: rpc/CMakeFiles/lsmdb_node.dir/rule
 # codegen rule for target.
 rpc/CMakeFiles/lsmdb_node.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/lsmdb_node.dir/build.make rpc/CMakeFiles/lsmdb_node.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=17,18 "Finished codegen for target lsmdb_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=27,28 "Finished codegen for target lsmdb_node"
 .PHONY : rpc/CMakeFiles/lsmdb_node.dir/codegen
 
 # clean rule for target.
@@ -395,7 +444,7 @@ rpc/CMakeFiles/kv_cli.dir/all: proto/CMakeFiles/lsmdb_proto.dir/all
 rpc/CMakeFiles/kv_cli.dir/all: rpc/CMakeFiles/lsmdb_rpc.dir/all
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/kv_cli.dir/build.make rpc/CMakeFiles/kv_cli.dir/depend
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/kv_cli.dir/build.make rpc/CMakeFiles/kv_cli.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=6,7 "Built target kv_cli"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=11,12 "Built target kv_cli"
 .PHONY : rpc/CMakeFiles/kv_cli.dir/all
 
 # Build rule for subdir invocation for target.
@@ -412,7 +461,7 @@ kv_cli: rpc/CMakeFiles/kv_cli.dir/rule
 # codegen rule for target.
 rpc/CMakeFiles/kv_cli.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f rpc/CMakeFiles/kv_cli.dir/build.make rpc/CMakeFiles/kv_cli.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=6,7 "Finished codegen for target kv_cli"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=11,12 "Finished codegen for target kv_cli"
 .PHONY : rpc/CMakeFiles/kv_cli.dir/codegen
 
 # clean rule for target.
@@ -428,7 +477,7 @@ tests/rpc/CMakeFiles/rpc_tests.dir/all: proto/CMakeFiles/lsmdb_proto.dir/all
 tests/rpc/CMakeFiles/rpc_tests.dir/all: rpc/CMakeFiles/lsmdb_rpc.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/rpc/CMakeFiles/rpc_tests.dir/build.make tests/rpc/CMakeFiles/rpc_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/rpc/CMakeFiles/rpc_tests.dir/build.make tests/rpc/CMakeFiles/rpc_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=43,44,45,46,47,48 "Built target rpc_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=53,54,55,56,57,58 "Built target rpc_tests"
 .PHONY : tests/rpc/CMakeFiles/rpc_tests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -445,7 +494,7 @@ rpc_tests: tests/rpc/CMakeFiles/rpc_tests.dir/rule
 # codegen rule for target.
 tests/rpc/CMakeFiles/rpc_tests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/rpc/CMakeFiles/rpc_tests.dir/build.make tests/rpc/CMakeFiles/rpc_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=43,44,45,46,47,48 "Finished codegen for target rpc_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=53,54,55,56,57,58 "Finished codegen for target rpc_tests"
 .PHONY : tests/rpc/CMakeFiles/rpc_tests.dir/codegen
 
 # clean rule for target.
@@ -460,7 +509,7 @@ tests/rpc/CMakeFiles/rpc_tests.dir/clean:
 api/CMakeFiles/lsmdb_api.dir/all:
 	$(MAKE) $(MAKESILENT) -f api/CMakeFiles/lsmdb_api.dir/build.make api/CMakeFiles/lsmdb_api.dir/depend
 	$(MAKE) $(MAKESILENT) -f api/CMakeFiles/lsmdb_api.dir/build.make api/CMakeFiles/lsmdb_api.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=11,12,13 "Built target lsmdb_api"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=16,17,18 "Built target lsmdb_api"
 .PHONY : api/CMakeFiles/lsmdb_api.dir/all
 
 # Build rule for subdir invocation for target.
@@ -477,7 +526,7 @@ lsmdb_api: api/CMakeFiles/lsmdb_api.dir/rule
 # codegen rule for target.
 api/CMakeFiles/lsmdb_api.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f api/CMakeFiles/lsmdb_api.dir/build.make api/CMakeFiles/lsmdb_api.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=11,12,13 "Finished codegen for target lsmdb_api"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=16,17,18 "Finished codegen for target lsmdb_api"
 .PHONY : api/CMakeFiles/lsmdb_api.dir/codegen
 
 # clean rule for target.
@@ -558,7 +607,7 @@ tests/api/CMakeFiles/api_grpc_tests.dir/clean:
 recovery/CMakeFiles/lsmdb_recovery.dir/all: api/CMakeFiles/lsmdb_api.dir/all
 	$(MAKE) $(MAKESILENT) -f recovery/CMakeFiles/lsmdb_recovery.dir/build.make recovery/CMakeFiles/lsmdb_recovery.dir/depend
 	$(MAKE) $(MAKESILENT) -f recovery/CMakeFiles/lsmdb_recovery.dir/build.make recovery/CMakeFiles/lsmdb_recovery.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=29,30,31 "Built target lsmdb_recovery"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=39,40,41 "Built target lsmdb_recovery"
 .PHONY : recovery/CMakeFiles/lsmdb_recovery.dir/all
 
 # Build rule for subdir invocation for target.
@@ -575,7 +624,7 @@ lsmdb_recovery: recovery/CMakeFiles/lsmdb_recovery.dir/rule
 # codegen rule for target.
 recovery/CMakeFiles/lsmdb_recovery.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f recovery/CMakeFiles/lsmdb_recovery.dir/build.make recovery/CMakeFiles/lsmdb_recovery.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=29,30,31 "Finished codegen for target lsmdb_recovery"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=39,40,41 "Finished codegen for target lsmdb_recovery"
 .PHONY : recovery/CMakeFiles/lsmdb_recovery.dir/codegen
 
 # clean rule for target.
@@ -591,7 +640,7 @@ tests/recovery/CMakeFiles/recovery_tests.dir/all: api/CMakeFiles/lsmdb_api.dir/a
 tests/recovery/CMakeFiles/recovery_tests.dir/all: recovery/CMakeFiles/lsmdb_recovery.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/recovery/CMakeFiles/recovery_tests.dir/build.make tests/recovery/CMakeFiles/recovery_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/recovery/CMakeFiles/recovery_tests.dir/build.make tests/recovery/CMakeFiles/recovery_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=41,42 "Built target recovery_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=51,52 "Built target recovery_tests"
 .PHONY : tests/recovery/CMakeFiles/recovery_tests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -608,7 +657,7 @@ recovery_tests: tests/recovery/CMakeFiles/recovery_tests.dir/rule
 # codegen rule for target.
 tests/recovery/CMakeFiles/recovery_tests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/recovery/CMakeFiles/recovery_tests.dir/build.make tests/recovery/CMakeFiles/recovery_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=41,42 "Finished codegen for target recovery_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=51,52 "Finished codegen for target recovery_tests"
 .PHONY : tests/recovery/CMakeFiles/recovery_tests.dir/codegen
 
 # clean rule for target.
@@ -623,7 +672,7 @@ tests/recovery/CMakeFiles/recovery_tests.dir/clean:
 lifecycle/CMakeFiles/lsmdb_lifecycle.dir/all: api/CMakeFiles/lsmdb_api.dir/all
 	$(MAKE) $(MAKESILENT) -f lifecycle/CMakeFiles/lsmdb_lifecycle.dir/build.make lifecycle/CMakeFiles/lsmdb_lifecycle.dir/depend
 	$(MAKE) $(MAKESILENT) -f lifecycle/CMakeFiles/lsmdb_lifecycle.dir/build.make lifecycle/CMakeFiles/lsmdb_lifecycle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=14,15,16 "Built target lsmdb_lifecycle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=24,25,26 "Built target lsmdb_lifecycle"
 .PHONY : lifecycle/CMakeFiles/lsmdb_lifecycle.dir/all
 
 # Build rule for subdir invocation for target.
@@ -640,7 +689,7 @@ lsmdb_lifecycle: lifecycle/CMakeFiles/lsmdb_lifecycle.dir/rule
 # codegen rule for target.
 lifecycle/CMakeFiles/lsmdb_lifecycle.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f lifecycle/CMakeFiles/lsmdb_lifecycle.dir/build.make lifecycle/CMakeFiles/lsmdb_lifecycle.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=14,15,16 "Finished codegen for target lsmdb_lifecycle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=24,25,26 "Finished codegen for target lsmdb_lifecycle"
 .PHONY : lifecycle/CMakeFiles/lsmdb_lifecycle.dir/codegen
 
 # clean rule for target.
@@ -657,7 +706,7 @@ tests/lifecycle/CMakeFiles/lifecycle_tests.dir/all: recovery/CMakeFiles/lsmdb_re
 tests/lifecycle/CMakeFiles/lifecycle_tests.dir/all: lifecycle/CMakeFiles/lsmdb_lifecycle.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/lifecycle/CMakeFiles/lifecycle_tests.dir/build.make tests/lifecycle/CMakeFiles/lifecycle_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/lifecycle/CMakeFiles/lifecycle_tests.dir/build.make tests/lifecycle/CMakeFiles/lifecycle_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=8,9,10 "Built target lifecycle_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=13,14,15 "Built target lifecycle_tests"
 .PHONY : tests/lifecycle/CMakeFiles/lifecycle_tests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -674,13 +723,114 @@ lifecycle_tests: tests/lifecycle/CMakeFiles/lifecycle_tests.dir/rule
 # codegen rule for target.
 tests/lifecycle/CMakeFiles/lifecycle_tests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/lifecycle/CMakeFiles/lifecycle_tests.dir/build.make tests/lifecycle/CMakeFiles/lifecycle_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=8,9,10 "Finished codegen for target lifecycle_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=13,14,15 "Finished codegen for target lifecycle_tests"
 .PHONY : tests/lifecycle/CMakeFiles/lifecycle_tests.dir/codegen
 
 # clean rule for target.
 tests/lifecycle/CMakeFiles/lifecycle_tests.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/lifecycle/CMakeFiles/lifecycle_tests.dir/build.make tests/lifecycle/CMakeFiles/lifecycle_tests.dir/clean
 .PHONY : tests/lifecycle/CMakeFiles/lifecycle_tests.dir/clean
+
+#=============================================================================
+# Target rules for target consensus/CMakeFiles/lsmdb_consensus.dir
+
+# All Build rule for target.
+consensus/CMakeFiles/lsmdb_consensus.dir/all: api/CMakeFiles/lsmdb_api.dir/all
+	$(MAKE) $(MAKESILENT) -f consensus/CMakeFiles/lsmdb_consensus.dir/build.make consensus/CMakeFiles/lsmdb_consensus.dir/depend
+	$(MAKE) $(MAKESILENT) -f consensus/CMakeFiles/lsmdb_consensus.dir/build.make consensus/CMakeFiles/lsmdb_consensus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=19,20,21,22,23 "Built target lsmdb_consensus"
+.PHONY : consensus/CMakeFiles/lsmdb_consensus.dir/all
+
+# Build rule for subdir invocation for target.
+consensus/CMakeFiles/lsmdb_consensus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consensus/CMakeFiles/lsmdb_consensus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles 0
+.PHONY : consensus/CMakeFiles/lsmdb_consensus.dir/rule
+
+# Convenience name for target.
+lsmdb_consensus: consensus/CMakeFiles/lsmdb_consensus.dir/rule
+.PHONY : lsmdb_consensus
+
+# codegen rule for target.
+consensus/CMakeFiles/lsmdb_consensus.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f consensus/CMakeFiles/lsmdb_consensus.dir/build.make consensus/CMakeFiles/lsmdb_consensus.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=19,20,21,22,23 "Finished codegen for target lsmdb_consensus"
+.PHONY : consensus/CMakeFiles/lsmdb_consensus.dir/codegen
+
+# clean rule for target.
+consensus/CMakeFiles/lsmdb_consensus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f consensus/CMakeFiles/lsmdb_consensus.dir/build.make consensus/CMakeFiles/lsmdb_consensus.dir/clean
+.PHONY : consensus/CMakeFiles/lsmdb_consensus.dir/clean
+
+#=============================================================================
+# Target rules for target tests/consensus/CMakeFiles/consensus_tests.dir
+
+# All Build rule for target.
+tests/consensus/CMakeFiles/consensus_tests.dir/all: api/CMakeFiles/lsmdb_api.dir/all
+tests/consensus/CMakeFiles/consensus_tests.dir/all: lifecycle/CMakeFiles/lsmdb_lifecycle.dir/all
+tests/consensus/CMakeFiles/consensus_tests.dir/all: consensus/CMakeFiles/lsmdb_consensus.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_tests.dir/build.make tests/consensus/CMakeFiles/consensus_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_tests.dir/build.make tests/consensus/CMakeFiles/consensus_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=8,9,10 "Built target consensus_tests"
+.PHONY : tests/consensus/CMakeFiles/consensus_tests.dir/all
+
+# Build rule for subdir invocation for target.
+tests/consensus/CMakeFiles/consensus_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/consensus/CMakeFiles/consensus_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles 0
+.PHONY : tests/consensus/CMakeFiles/consensus_tests.dir/rule
+
+# Convenience name for target.
+consensus_tests: tests/consensus/CMakeFiles/consensus_tests.dir/rule
+.PHONY : consensus_tests
+
+# codegen rule for target.
+tests/consensus/CMakeFiles/consensus_tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_tests.dir/build.make tests/consensus/CMakeFiles/consensus_tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=8,9,10 "Finished codegen for target consensus_tests"
+.PHONY : tests/consensus/CMakeFiles/consensus_tests.dir/codegen
+
+# clean rule for target.
+tests/consensus/CMakeFiles/consensus_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_tests.dir/build.make tests/consensus/CMakeFiles/consensus_tests.dir/clean
+.PHONY : tests/consensus/CMakeFiles/consensus_tests.dir/clean
+
+#=============================================================================
+# Target rules for target tests/consensus/CMakeFiles/consensus_grpc_tests.dir
+
+# All Build rule for target.
+tests/consensus/CMakeFiles/consensus_grpc_tests.dir/all: proto/CMakeFiles/lsmdb_proto.dir/all
+tests/consensus/CMakeFiles/consensus_grpc_tests.dir/all: rpc/CMakeFiles/lsmdb_rpc.dir/all
+tests/consensus/CMakeFiles/consensus_grpc_tests.dir/all: api/CMakeFiles/lsmdb_api.dir/all
+tests/consensus/CMakeFiles/consensus_grpc_tests.dir/all: consensus/CMakeFiles/lsmdb_consensus.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_grpc_tests.dir/build.make tests/consensus/CMakeFiles/consensus_grpc_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_grpc_tests.dir/build.make tests/consensus/CMakeFiles/consensus_grpc_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=6,7 "Built target consensus_grpc_tests"
+.PHONY : tests/consensus/CMakeFiles/consensus_grpc_tests.dir/all
+
+# Build rule for subdir invocation for target.
+tests/consensus/CMakeFiles/consensus_grpc_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles 29
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/consensus/CMakeFiles/consensus_grpc_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles 0
+.PHONY : tests/consensus/CMakeFiles/consensus_grpc_tests.dir/rule
+
+# Convenience name for target.
+consensus_grpc_tests: tests/consensus/CMakeFiles/consensus_grpc_tests.dir/rule
+.PHONY : consensus_grpc_tests
+
+# codegen rule for target.
+tests/consensus/CMakeFiles/consensus_grpc_tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_grpc_tests.dir/build.make tests/consensus/CMakeFiles/consensus_grpc_tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/Distributed-LSM-Tree-Database-Engine/build/CMakeFiles --progress-num=6,7 "Finished codegen for target consensus_grpc_tests"
+.PHONY : tests/consensus/CMakeFiles/consensus_grpc_tests.dir/codegen
+
+# clean rule for target.
+tests/consensus/CMakeFiles/consensus_grpc_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_grpc_tests.dir/build.make tests/consensus/CMakeFiles/consensus_grpc_tests.dir/clean
+.PHONY : tests/consensus/CMakeFiles/consensus_grpc_tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

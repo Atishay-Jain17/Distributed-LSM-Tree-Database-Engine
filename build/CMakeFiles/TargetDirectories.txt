@@ -40,3 +40,12 @@
 /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/CMakeFiles/test.dir
 /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/CMakeFiles/edit_cache.dir
 /home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/CMakeFiles/rebuild_cache.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/consensus/CMakeFiles/lsmdb_consensus.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/consensus/CMakeFiles/test.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/consensus/CMakeFiles/edit_cache.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/consensus/CMakeFiles/rebuild_cache.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/consensus/CMakeFiles/consensus_tests.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/consensus/CMakeFiles/consensus_grpc_tests.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/consensus/CMakeFiles/test.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/consensus/CMakeFiles/edit_cache.dir
+/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/consensus/CMakeFiles/rebuild_cache.dir

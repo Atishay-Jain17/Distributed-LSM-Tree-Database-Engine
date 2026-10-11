@@ -29,3 +29,7 @@ add_subdirectory(tests/recovery)
 # --- Week 4 (Suhani): MemTable rotation, flush worker, compaction scheduling.
 add_subdirectory(lifecycle)
 add_subdirectory(tests/lifecycle)
+
+# --- Week 5 (Suhani): replicated command format and the Raft/storage boundary.
+add_subdirectory(consensus)
+add_subdirectory(tests/consensus)

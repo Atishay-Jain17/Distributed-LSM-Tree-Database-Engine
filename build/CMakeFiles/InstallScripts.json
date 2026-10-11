@@ -10,7 +10,9 @@
 		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/recovery/cmake_install.cmake",
 		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/cmake_install.cmake",
 		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/lifecycle/cmake_install.cmake",
-		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/cmake_install.cmake"
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/lifecycle/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/consensus/cmake_install.cmake",
+		"/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/consensus/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

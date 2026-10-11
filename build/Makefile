@@ -282,6 +282,45 @@ lifecycle_tests/fast:
 	$(MAKE) $(MAKESILENT) -f tests/lifecycle/CMakeFiles/lifecycle_tests.dir/build.make tests/lifecycle/CMakeFiles/lifecycle_tests.dir/build
 .PHONY : lifecycle_tests/fast
 
+#=============================================================================
+# Target rules for targets named lsmdb_consensus
+
+# Build rule for target.
+lsmdb_consensus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lsmdb_consensus
+.PHONY : lsmdb_consensus
+
+# fast build rule for target.
+lsmdb_consensus/fast:
+	$(MAKE) $(MAKESILENT) -f consensus/CMakeFiles/lsmdb_consensus.dir/build.make consensus/CMakeFiles/lsmdb_consensus.dir/build
+.PHONY : lsmdb_consensus/fast
+
+#=============================================================================
+# Target rules for targets named consensus_tests
+
+# Build rule for target.
+consensus_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consensus_tests
+.PHONY : consensus_tests
+
+# fast build rule for target.
+consensus_tests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_tests.dir/build.make tests/consensus/CMakeFiles/consensus_tests.dir/build
+.PHONY : consensus_tests/fast
+
+#=============================================================================
+# Target rules for targets named consensus_grpc_tests
+
+# Build rule for target.
+consensus_grpc_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consensus_grpc_tests
+.PHONY : consensus_grpc_tests
+
+# fast build rule for target.
+consensus_grpc_tests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/consensus/CMakeFiles/consensus_grpc_tests.dir/build.make tests/consensus/CMakeFiles/consensus_grpc_tests.dir/build
+.PHONY : consensus_grpc_tests/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -293,9 +332,12 @@ help:
 	@echo "... test"
 	@echo "... api_grpc_tests"
 	@echo "... api_tests"
+	@echo "... consensus_grpc_tests"
+	@echo "... consensus_tests"
 	@echo "... kv_cli"
 	@echo "... lifecycle_tests"
 	@echo "... lsmdb_api"
+	@echo "... lsmdb_consensus"
 	@echo "... lsmdb_lifecycle"
 	@echo "... lsmdb_node"
 	@echo "... lsmdb_proto"

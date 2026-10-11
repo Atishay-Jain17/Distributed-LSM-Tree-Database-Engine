@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsmdb_consensus.a CMakeFiles/lsmdb_consensus.dir/src/command.cpp.o CMakeFiles/lsmdb_consensus.dir/src/storage_state_machine.cpp.o CMakeFiles/lsmdb_consensus.dir/src/reference_consensus.cpp.o CMakeFiles/lsmdb_consensus.dir/src/replicated_backend.cpp.o
+/usr/bin/ranlib liblsmdb_consensus.a

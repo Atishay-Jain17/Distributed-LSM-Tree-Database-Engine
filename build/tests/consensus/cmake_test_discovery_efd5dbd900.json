@@ -1,0 +1,37 @@
+{
+  "tests": 5,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "GrpcBoundary",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "ClientWritesBecomeLogEntriesThatDecodeToTheSameCommands",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/consensus\/grpc_boundary_test.cpp",
+          "line": 47
+        },
+        {
+          "name": "RequestRejectedByRpcValidationNeverReachesTheLog",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/consensus\/grpc_boundary_test.cpp",
+          "line": 77
+        },
+        {
+          "name": "MaximumSizeValueCrossesGrpcAndIsLoggedIntact",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/consensus\/grpc_boundary_test.cpp",
+          "line": 84
+        },
+        {
+          "name": "WriteToAFollowerFailsAndLeavesStorageAndLogUntouched",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/consensus\/grpc_boundary_test.cpp",
+          "line": 97
+        },
+        {
+          "name": "EncodedCommandBytesSurviveProtobufWireFormat",
+          "file": "\/home\/suhani\/Distributed-LSM-Tree-Database-Engine\/lsm-db\/tests\/consensus\/grpc_boundary_test.cpp",
+          "line": 105
+        }
+      ]
+    }
+  ]
+}
