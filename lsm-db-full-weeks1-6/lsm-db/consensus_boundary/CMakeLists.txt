@@ -7,4 +7,4 @@ add_library(lsmdb_consensus_boundary STATIC
   src/reference_consensus.cpp
   src/replicated_backend.cpp)
 target_include_directories(lsmdb_consensus_boundary PUBLIC include)
-target_link_libraries(lsmdb_consensus_boundary PUBLIC lsmdb_api Threads::Threads)
+target_link_libraries(lsmdb_consensus_boundary PUBLIC lsmdb_api lsmdb_proto Threads::Threads)

@@ -30,24 +30,39 @@ replicated entries land.
 
 ## 2. The replicated command
 
-`Command { type: Put | Delete, key, value, request_id }`. Encoded (`Encode`/`Decode`) as:
+`Command { type: Put | Delete, key, value, request_id }`.
 
-| offset | size | field |
-|---|---|---|
-| 0 | 1 | format version (= 1) |
-| 1 | 1 | type (1 = put, 2 = delete) |
-| 2 | 4 | key length (little-endian u32) |
-| 6 | 4 | value length |
-| 10 | 4 | request_id length |
-| 14 | … | key, then value, then request_id |
+### Wire Format: Unified on Protobuf `lsmdb.v1.ReplicatedCommand`
 
-* The Raft log stores these bytes as the entry payload. `AppendEntries` should carry them in a
-  `bytes` field (the largest possible command is `kMaxEncodedCommandBytes` ≈ 1 MiB + 1.2 KiB, under
-  the 2 MiB gRPC cap; a compile-time check in the gRPC test enforces it).
-* A delete is its own command (a tombstone is written by storage), with an empty value.
-* The layout is pinned by a test. To change it, add a new version number and keep decoding version 1.
-* `Decode` is strict: truncated input, trailing bytes, unknown version/type and lengths that do not
-  match the buffer are all errors, and no input can make it read out of bounds.
+Following our architecture unification decision, the wire format for Raft log entries is unified on Protobuf (`lsmdb.v1.ReplicatedCommand`):
+
+```protobuf
+enum CommandType {
+  COMMAND_TYPE_UNSPECIFIED = 0;
+  COMMAND_TYPE_PUT = 1;
+  COMMAND_TYPE_DELETE = 2;
+}
+
+message ReplicatedCommand {
+  CommandType type = 1;
+  bytes key = 2;
+  bytes value = 3;  // empty for DELETE
+}
+```
+
+### Why Protobuf
+1. **Single Wire Format**: Eliminates duplicate custom serializers; all modules (RPC, Consensus, Storage Boundary) agree on the exact byte sequence in the Raft log.
+2. **Ecosystem Compatibility**: Matches Vinayak's write path (`consensus/`) and RPC transport.
+3. **Interoperability**: Suhani's `Encode()` output decodes transparently with Vinayak's `DecodeCommand()`, and vice versa (verified by compatibility tests).
+4. **Safety & Strictness**: Protobuf ignores unknown fields by default; therefore `consensus_boundary::Decode()` adds explicit validation checks:
+   - Rejects empty payloads and failed parse attempts.
+   - Rejects unknown or unspecified command types.
+   - Rejects unknown fields (`GetReflection()->GetUnknownFields()`).
+   - `Validate()` rejects empty keys, oversized values, and DELETE commands carrying non-empty values.
+
+### Size Bounds and `request_id`
+- Wire size bound `kMaxEncodedCommandBytes` accommodates `kMaxKeyBytes` (1024) + `kMaxValueBytes` (1 MiB) + `kMaxRequestIdBytes` (128) plus Protobuf framing slack (64 bytes), well below the 2 MiB gRPC cap (`static_assert` verified).
+- `request_id` is maintained in the in-memory `Command` struct for caller tracing and future de-duplication. Because `command.proto` currently lacks field 4, this request is tracked in `docs/integration-requests.md` (Request 1); until merged, `request_id` is retained in memory.
 
 ## 3. Validation (before storage)
 

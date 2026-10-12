@@ -1,19 +1,11 @@
 #include "lsmdb/consensus_boundary/command.h"
 
-#include <limits>
+#include <string>
+
+#include "lsmdb/v1/command.pb.h"
 
 namespace lsmdb::consensus_boundary {
 namespace {
-
-void PutU32(std::string& out, std::uint32_t v) {
-  for (int i = 0; i < 4; ++i) out.push_back(static_cast<char>((v >> (8 * i)) & 0xff));
-}
-
-std::uint32_t GetU32(const std::string& s, std::size_t pos) {
-  std::uint32_t v = 0;
-  for (int i = 0; i < 4; ++i) v |= static_cast<std::uint32_t>(static_cast<unsigned char>(s[pos + i])) << (8 * i);
-  return v;
-}
 
 ValidationResult Fail(std::string m) { return {false, std::move(m)}; }
 
@@ -34,41 +26,51 @@ ValidationResult Validate(const Command& cmd) {
 }
 
 std::string Encode(const Command& cmd) {
+  v1::ReplicatedCommand proto;
+  if (cmd.type == CommandType::kPut) {
+    proto.set_type(v1::COMMAND_TYPE_PUT);
+  } else if (cmd.type == CommandType::kDelete) {
+    proto.set_type(v1::COMMAND_TYPE_DELETE);
+  } else {
+    proto.set_type(v1::COMMAND_TYPE_UNSPECIFIED);
+  }
+  proto.set_key(cmd.key);
+  if (cmd.type == CommandType::kPut) {
+    proto.set_value(cmd.value);
+  }
+  // TODO(vinayak): wire request_id once command.proto adds field 4 (Request #1 in docs/integration-requests.md)
   std::string out;
-  out.reserve(kCommandHeaderBytes + cmd.key.size() + cmd.value.size() + cmd.request_id.size());
-  out.push_back(static_cast<char>(kCommandFormatVersion));
-  out.push_back(static_cast<char>(cmd.type));
-  PutU32(out, static_cast<std::uint32_t>(cmd.key.size()));
-  PutU32(out, static_cast<std::uint32_t>(cmd.value.size()));
-  PutU32(out, static_cast<std::uint32_t>(cmd.request_id.size()));
-  out += cmd.key;
-  out += cmd.value;
-  out += cmd.request_id;
+  proto.SerializeToString(&out);
   return out;
 }
 
 DecodeResult Decode(const std::string& bytes) {
   auto fail = [](std::string m) { return DecodeResult{std::nullopt, std::move(m)}; };
-  if (bytes.size() < kCommandHeaderBytes) return fail("truncated header");
-  const auto version = static_cast<std::uint8_t>(bytes[0]);
-  if (version != kCommandFormatVersion) return fail("unsupported command format version " + std::to_string(version));
-  const auto type = static_cast<std::uint8_t>(bytes[1]);
-  if (type != static_cast<std::uint8_t>(CommandType::kPut) &&
-      type != static_cast<std::uint8_t>(CommandType::kDelete))
-    return fail("unknown command type " + std::to_string(type));
-  const std::uint64_t klen = GetU32(bytes, 2), vlen = GetU32(bytes, 6), rlen = GetU32(bytes, 10);
-  // 64-bit sum of three u32 cannot overflow, so this comparison is safe for any input.
-  if (kCommandHeaderBytes + klen + vlen + rlen != bytes.size())
-    return fail("length fields do not match the buffer size");
-  Command c;
-  c.type = static_cast<CommandType>(type);
-  std::size_t pos = kCommandHeaderBytes;
-  c.key.assign(bytes, pos, klen);
-  pos += klen;
-  c.value.assign(bytes, pos, vlen);
-  pos += vlen;
-  c.request_id.assign(bytes, pos, rlen);
-  return DecodeResult{std::move(c), {}};
+  if (bytes.empty()) return fail("empty command payload");
+
+  v1::ReplicatedCommand proto;
+  if (!proto.ParseFromString(bytes)) {
+    return fail("failed to parse protobuf ReplicatedCommand");
+  }
+
+  // Reject unknown fields to maintain strictness
+  if (proto.GetReflection()->GetUnknownFields(proto).field_count() > 0) {
+    return fail("unknown protobuf fields rejected");
+  }
+
+  // Reject unspecified or unknown command types
+  if (proto.type() != v1::COMMAND_TYPE_PUT && proto.type() != v1::COMMAND_TYPE_DELETE) {
+    return fail("unknown or unspecified command type");
+  }
+
+  Command cmd;
+  cmd.type = (proto.type() == v1::COMMAND_TYPE_PUT) ? CommandType::kPut : CommandType::kDelete;
+  cmd.key = proto.key();
+  cmd.value = proto.value();
+  // TODO(vinayak): restore request_id from proto once field 4 is added (Request #1 in docs/integration-requests.md)
+  cmd.request_id = "";
+
+  return DecodeResult{std::move(cmd), {}};
 }
 
 }  // namespace lsmdb::consensus_boundary

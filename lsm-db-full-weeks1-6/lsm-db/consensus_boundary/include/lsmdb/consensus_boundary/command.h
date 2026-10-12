@@ -2,11 +2,7 @@
 // The replicated command (Week 5): the unit of data Raft copies between nodes and that every node
 // applies to its storage in the same order. See docs/consensus-boundary.md.
 //
-// Wire/log form (version 1, little-endian, produced by Encode()):
-//   u8 version(=1) | u8 type | u32 key_len | u32 value_len | u32 request_id_len
-//   | key | value | request_id
-// The Raft log stores these bytes as the entry payload; AppendEntries carries them in a `bytes`
-// field. Nothing here depends on gRPC or protobuf.
+// Wire/log form: unified on protobuf lsmdb.v1.ReplicatedCommand (single wire format).
 #include <cstddef>
 #include <cstdint>
 #include <optional>
@@ -20,7 +16,7 @@ struct Command {
   CommandType type = CommandType::kPut;
   std::string key;
   std::string value;       // must be empty for kDelete
-  std::string request_id;  // caller-chosen id (tracing / future de-duplication); may be empty
+  std::string request_id;  // caller-chosen id (tracing / future de-duplication); retained in-memory
 
   static Command Put(std::string key, std::string value, std::string request_id = {}) {
     return {CommandType::kPut, std::move(key), std::move(value), std::move(request_id)};
@@ -31,14 +27,14 @@ struct Command {
   bool operator==(const Command&) const = default;
 };
 
-// Same limits as the RPC layer (rpc/validation.h); a test keeps them equal.
+// Same limits as the RPC layer (rpc/validation.h); a static_assert/test keeps them equal.
 inline constexpr std::size_t kMaxKeyBytes = 1024;
 inline constexpr std::size_t kMaxValueBytes = 1024 * 1024;
 inline constexpr std::size_t kMaxRequestIdBytes = 128;
-inline constexpr std::uint8_t kCommandFormatVersion = 1;
-inline constexpr std::size_t kCommandHeaderBytes = 14;
+// Small fixed slack for protobuf field tags and varint length headers.
+inline constexpr std::size_t kProtobufSlackBytes = 64;
 inline constexpr std::size_t kMaxEncodedCommandBytes =
-    kCommandHeaderBytes + kMaxKeyBytes + kMaxValueBytes + kMaxRequestIdBytes;
+    kMaxKeyBytes + kMaxValueBytes + kMaxRequestIdBytes + kProtobufSlackBytes;
 
 struct ValidationResult {
   bool ok = true;
@@ -50,7 +46,7 @@ struct ValidationResult {
 // applying, so storage only ever sees valid commands.
 ValidationResult Validate(const Command& cmd);
 
-// Serialises a command. Does not validate (call Validate first); never throws for valid sizes.
+// Serialises a command using protobuf v1::ReplicatedCommand. Does not validate (call Validate first); never throws for valid sizes.
 std::string Encode(const Command& cmd);
 
 struct DecodeResult {
@@ -59,9 +55,8 @@ struct DecodeResult {
   explicit operator bool() const { return command.has_value(); }
 };
 
-// Parses bytes produced by Encode(). Strict: rejects truncated input, trailing bytes, unknown
-// version or type, and lengths that do not match the buffer. Does not check size limits
-// (Validate does). Never reads out of bounds, whatever the input.
+// Parses bytes produced by Encode() using protobuf v1::ReplicatedCommand. Strict: rejects truncated/corrupt input,
+// unknown or unspecified type, empty key, or delete with non-empty value.
 DecodeResult Decode(const std::string& bytes);
 
 }  // namespace lsmdb::consensus_boundary

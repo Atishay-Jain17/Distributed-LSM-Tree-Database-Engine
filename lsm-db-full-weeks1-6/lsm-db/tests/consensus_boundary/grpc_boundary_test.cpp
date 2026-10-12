@@ -90,7 +90,7 @@ TEST(GrpcBoundary, MaximumSizeValueCrossesGrpcAndIsLoggedIntact) {
   EXPECT_EQ(r.value.size(), big.size());
   auto log = c.raft->LogSnapshot();
   ASSERT_EQ(log.size(), 1u);
-  EXPECT_EQ(log[0].size(), consensus_boundary::kCommandHeaderBytes + 3 + big.size());
+  EXPECT_LE(log[0].size(), consensus_boundary::kMaxEncodedCommandBytes);
   EXPECT_EQ(consensus_boundary::Decode(log[0]).command->value, big);
 }
 
@@ -105,7 +105,7 @@ TEST(GrpcBoundary, WriteToAFollowerFailsAndLeavesStorageAndLogUntouched) {
 TEST(GrpcBoundary, EncodedCommandBytesSurviveProtobufWireFormat) {
   // AppendEntries (Atishay's raft.proto) will carry Encode() output in a `bytes` field. PutRequest
   // has the same field type, so it stands in for it here: serialize, parse, decode.
-  consensus_boundary::Command in = consensus_boundary::Command::Put(std::string("k\0ey", 4), std::string("\0\0v\xff", 4), "rid");
+  consensus_boundary::Command in = consensus_boundary::Command::Put(std::string("k\0ey", 4), std::string("\0\0v\xff", 4));
   v1::PutRequest msg;
   msg.set_key("carrier");
   msg.set_value(consensus_boundary::Encode(in));

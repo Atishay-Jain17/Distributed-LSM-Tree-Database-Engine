@@ -134,7 +134,9 @@ TEST(Consensus, LogHoldsEncodedCommandsThatDecodeToWhatWasProposed) {
   for (std::size_t i = 0; i < sent.size(); ++i) {
     DecodeResult d = Decode(log[i]);
     ASSERT_TRUE(d);
-    EXPECT_EQ(*d.command, sent[i]);
+        EXPECT_EQ(d.command->type, sent[i].type);
+    EXPECT_EQ(d.command->key, sent[i].key);
+    EXPECT_EQ(d.command->value, sent[i].value);
   }
 }
 

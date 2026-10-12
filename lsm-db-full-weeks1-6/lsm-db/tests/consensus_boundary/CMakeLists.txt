@@ -4,7 +4,7 @@ include(GoogleTest)
 add_executable(consensus_boundary_tests
   command_test.cpp
   boundary_test.cpp)
-target_link_libraries(consensus_boundary_tests PRIVATE lsmdb_consensus_boundary lsmdb_lifecycle GTest::gtest_main)
+target_link_libraries(consensus_boundary_tests PRIVATE lsmdb_consensus_boundary lsmdb_lifecycle lsmdb_consensus GTest::gtest_main)
 gtest_discover_tests(consensus_boundary_tests)
 
 # Over real gRPC; only built when the RPC library is part of the build.
