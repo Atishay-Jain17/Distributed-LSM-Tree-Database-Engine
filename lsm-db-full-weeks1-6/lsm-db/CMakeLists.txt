@@ -41,3 +41,8 @@ add_subdirectory(consensus_boundary)
 add_subdirectory(tests/consensus_boundary)
 add_subdirectory(consensus)
 add_subdirectory(tests/consensus)
+
+# --- Week 6 (Suhani): distributed reads, consistency routing & linearizability
+add_subdirectory(reads)
+add_subdirectory(tests/reads)
+

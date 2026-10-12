@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 # Sunday smoke test: deploy the three-node baseline and verify it works.
-# Run from the deploy/ directory:  cd deploy && ./smoke-test.sh
+# Run from the deploy/ directory: cd deploy && ./smoke-test.sh
 set -euo pipefail
 
 CLUSTER_NAME="lsm-dev"
 RELEASE_NAME="lsm-db"
 
-echo "== 1. Building the placeholder node image =="
-docker build -t lsm-db-node:dev ./placeholder-node
+if [ -f "./Dockerfile" ]; then
+  echo "== 1. Building real lsmdb_node image =="
+  docker build -t lsm-db-node:dev -f ./Dockerfile ..
+else
+  echo "== 1. Building node image =="
+  docker build -t lsm-db-node:dev ./placeholder-node
+fi
 
 echo "== 2. Loading image into kind cluster =="
 kind load docker-image lsm-db-node:dev --name "$CLUSTER_NAME"

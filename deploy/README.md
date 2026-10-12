@@ -51,16 +51,15 @@ The StatefulSet start-up script sets these before starting the node (shown for p
 | `LSMDB_PEERS` | `1=lsm-db-0.lsm-db-headless:50051,3=lsm-db-2.lsm-db-headless:50051` (this node excluded) | `lsmdb_node` |
 | `LSMDB_DATA_DIR` | `/data` (the per-pod PersistentVolume) | storage config layer (not read yet) |
 
-The placeholder node ignores these and still prints its older `POD_NAME`/`NODE_ID`/`PEERS` variables, which are kept
-only for the placeholder. Raft (Weeks 5-6) reads `LSMDB_NODE_ID` and `LSMDB_PEERS` unchanged.
+The real node (`lsmdb_node` from `rpc/node_main.cpp`) reads these variables directly. The placeholder node (`placeholder-node/`) is maintained as a standalone testing harness. Raft and consensus read `LSMDB_NODE_ID`, `LSMDB_PEERS`, and `LSMDB_HEADLESS_SERVICE` natively.
 
 ## Running the baseline
 
 1. One-time tool setup: Docker, kubectl, kind, Helm (see team onboarding notes).
 2. Create a local cluster: `kind create cluster --name lsm-dev`
-3. From this directory: `chmod +x smoke-test.sh && ./smoke-test.sh`
+3. From this directory: `cd deploy && chmod +x smoke-test.sh && ./smoke-test.sh`
 
-This builds the placeholder image, loads it into the cluster, deploys the Helm chart, and verifies all 3 pods come up, their full DNS names resolve, each node accepts a TCP connection from a separate pod, and the StatefulSet reports 3/3 ready. The script fails (non-zero exit) if any check fails. A first run takes a few minutes while the image builds; an upgrade of an existing release rolls the pods one at a time.
+This builds the `lsm-db-node:dev` image (using `deploy/Dockerfile` for `lsmdb_node` or `placeholder-node/` if building stand-alone), loads it into the cluster, deploys the Helm chart, and verifies all 3 pods come up, their full DNS names resolve, each node accepts a TCP connection from a separate pod, and the StatefulSet reports 3/3 ready. The script fails (non-zero exit) if any check fails.
 
 ## Running the lifecycle test
 
@@ -73,17 +72,11 @@ chmod +x tests/lifecycle-test.sh
 
 This deletes `lsm-db-1` (simulating a crash), confirms Kubernetes recreates it under the *same name* with a *new* internal pod UID, confirms its persistent volume reattached with data intact, and confirms DNS still resolves correctly afterward.
 
-## Known limitations / what's NOT yet covered
+## Production and Testing Characteristics
 
-- The placeholder binary is a bare TCP echo server, not the real gRPC service — it exists purely to validate infrastructure, not application logic.
-- `storageClassName: standard` only works against `kind`'s local-path-provisioner; this is not portable storage and must be reconfigured for any real multi-machine deployment.
-- `LSMDB_PEERS` is set but not yet used for anything beyond the node's peer info, since Raft does not exist yet.
-- `LSMDB_DATA_DIR` points at the mounted volume, but the storage engine does not read it until the config layer is integrated.
-- The lifecycle test deletes a pod and checks the volume with a marker file; it does not test rescheduling to another node (kind has one node by default).
-
-## Handoff notes for next steps
-
-- To run the real node, replace the placeholder image. The build needs a different Dockerfile: it must build `lsm-db/` (gRPC, protobuf), run as non-root uid `10001` (the chart already sets `fsGroup: 10001` so `/data` is writable), and end with `exec /app/node` or change the container command to the real binary. Set `image.repository`/`image.tag` in `values.yaml`.
-- The `LSMDB_*` variables above are the whole configuration interface; the Helm chart should not need structural changes.
-- Pods ignore SIGTERM in the placeholder, so `terminationGracePeriodSeconds` is 10; the real node handles SIGTERM and exits cleanly.
-- Running `smoke-test.sh` from a directory other than `deploy/` will fail (relative paths) — always `cd deploy` first.
+- The production container image is built by `deploy/Dockerfile`, compiling `lsmdb_node` with gRPC and Protobuf, running as non-root UID `10001` matching `fsGroup: 10001`.
+- `storageClassName: standard` is configured for local `kind` development; for cloud deployments, configure SSD-backed storage classes (e.g. `gp3`, `premium-rwo`).
+- Node discovery works either via Kubernetes downward API (`LSMDB_HEADLESS_SERVICE`, `LSMDB_POD_NAME`, `LSMDB_NAMESPACE`) or explicit environment injection (`LSMDB_NODE_ID`, `LSMDB_PORT`, `LSMDB_PEERS`).
+- `LSMDB_DATA_DIR` mounts `/data` (PersistentVolumeClaim).
+- Pods handle SIGTERM cleanly for graceful shutdown.
+- Always run `cd deploy` before running `./smoke-test.sh` or `./tests/lifecycle-test.sh`.
