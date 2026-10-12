@@ -7,14 +7,13 @@
 #include "lsmdb/reads/read_router.h"
 #include "lsmdb/rpc/storage_backend.h"
 
-#include "lsmdb/rpc/status.h"
-
 namespace lsmdb::reads {
 
 // Thrown when a read hits a follower under linearizable consistency.
-struct ReadNotLeaderException : public rpc::NotLeaderException {
-  explicit ReadNotLeaderException(std::optional<v1::NodeInfo> hint)
-      : rpc::NotLeaderException("cannot serve read: not the leader", std::move(hint)) {}
+struct ReadNotLeaderException : public std::runtime_error {
+  explicit ReadNotLeaderException(std::optional<v1::NodeInfo> hint = std::nullopt)
+      : std::runtime_error("cannot serve read: not the leader"), leader_hint(std::move(hint)) {}
+  std::optional<v1::NodeInfo> leader_hint;
 };
 
 // StorageBackend adapter ensuring Get() operations obey configured consistency guarantees.
