@@ -251,4 +251,38 @@ TEST_F(ThreeNodeReadClusterTest, ReadAfterDeleteAcrossCluster) {
   EXPECT_EQ(res.status.code(), v1::STATUS_CODE_NOT_FOUND);
 }
 
+TEST_F(ThreeNodeReadClusterTest, FollowerCannotServeStaleDataViaNormalClientPath) {
+  // Client initialized with follower targets first: Node 2, Node 3, then Leader (Node 1)
+  std::vector<std::string> follower_first = {nodes_[1]->address, nodes_[2]->address, nodes_[0]->address};
+  ConsistentClusterClient client(follower_first);
+
+  // Write committed through leader
+  ASSERT_EQ(client.Put("stale_guard_key", "committed_v1").code(), v1::STATUS_CODE_OK);
+
+  // Tamper follower raw storage with older / stale value to simulate replication lag
+  nodes_[1]->raw_storage->Put("stale_guard_key", "stale_old_val");
+
+  // Client read must NOT read stale value from follower; it must redirect to leader and return committed_v1
+  auto res = client.Get("stale_guard_key");
+  EXPECT_EQ(res.status.code(), v1::STATUS_CODE_OK);
+  EXPECT_EQ(res.value, "committed_v1");
+  EXPECT_EQ(client.leader_target(), nodes_[0]->address);
+}
+
+TEST_F(ThreeNodeReadClusterTest, ReadAfterOverwriteAndVersionChange) {
+  ConsistentClusterClient client(TargetAddresses());
+
+  // Version 1
+  ASSERT_EQ(client.Put("mvcc_key", "version_1").code(), v1::STATUS_CODE_OK);
+  EXPECT_EQ(client.Get("mvcc_key").value, "version_1");
+
+  // Version 2 overwrite
+  ASSERT_EQ(client.Put("mvcc_key", "version_2").code(), v1::STATUS_CODE_OK);
+  EXPECT_EQ(client.Get("mvcc_key").value, "version_2");
+
+  // Version 3 overwrite
+  ASSERT_EQ(client.Put("mvcc_key", "version_3").code(), v1::STATUS_CODE_OK);
+  EXPECT_EQ(client.Get("mvcc_key").value, "version_3");
+}
+
 }  // namespace lsmdb::reads::testing
