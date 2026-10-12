@@ -37,5 +37,7 @@ add_subdirectory(benchmarks)
 add_subdirectory(tests/storage)
 
 # --- Weeks 5-6: consensus (Suhani: command format + Raft boundary; Vinayak: peer discovery + write path)
+add_subdirectory(consensus_boundary)
+add_subdirectory(tests/consensus_boundary)
 add_subdirectory(consensus)
 add_subdirectory(tests/consensus)

@@ -1,5 +1,0 @@
-if(EXISTS "/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests[1]_tests.cmake")
-  include("/home/suhani/Distributed-LSM-Tree-Database-Engine/build/tests/recovery/recovery_tests[1]_tests.cmake")
-else()
-  add_test(recovery_tests_NOT_BUILT recovery_tests_NOT_BUILT)
-endif()
