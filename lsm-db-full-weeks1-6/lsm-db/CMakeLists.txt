@@ -18,11 +18,26 @@ add_subdirectory(proto)
 add_subdirectory(rpc)
 add_subdirectory(tests/rpc)
 
+# --- Week 2 (Suhani): single-node storage API over a MemTable.
+add_subdirectory(api)
+add_subdirectory(tests/api)
+
+# --- Week 3 (Suhani): startup recovery (WAL replay into the MemTable).
+add_subdirectory(recovery)
+add_subdirectory(tests/recovery)
+
+# --- Week 4 (Suhani): MemTable rotation, flush worker, compaction scheduling.
+add_subdirectory(lifecycle)
+add_subdirectory(tests/lifecycle)
+
+
 # --- Weeks 2-4 (Vinayak): storage layer pieces
 add_subdirectory(storage)
 add_subdirectory(benchmarks)
 add_subdirectory(tests/storage)
 
-# --- Weeks 5-6 (Vinayak): peer discovery and distributed write path
+# --- Weeks 5-6: consensus (Suhani: command format + Raft boundary; Vinayak: peer discovery + write path)
+add_subdirectory(consensus_boundary)
+add_subdirectory(tests/consensus_boundary)
 add_subdirectory(consensus)
 add_subdirectory(tests/consensus)
