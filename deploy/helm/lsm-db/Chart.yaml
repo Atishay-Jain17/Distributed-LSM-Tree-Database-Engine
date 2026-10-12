@@ -1,0 +1,6 @@
+apiVersion: v2
+name: lsm-db
+description: Helm chart for the distributed LSM-tree database cluster
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
