@@ -153,12 +153,18 @@ TEST_CASE(TestWalRejectsNonIncreasingSequenceNumbers) {
     {
         WalWriter writer(path, true);
         ASSERT_STATUS_OK(writer.Open());
+        ASSERT_STATUS_OK(writer.Append(WalRecord{0, WalOpType::Put, 1, "zero", "0"}));
         ASSERT_STATUS_OK(writer.Append(WalRecord{2, WalOpType::Put, 1, "a", "1"}));
-        ASSERT_STATUS_OK(writer.Append(WalRecord{1, WalOpType::Put, 1, "b", "2"}));
+        ASSERT_STATUS_CODE(writer.Append(WalRecord{1, WalOpType::Put, 1, "b", "2"}),
+                           StatusCode::InvalidArgument);
+        ASSERT_STATUS_OK(writer.Append(WalRecord{3, WalOpType::Put, 1, "c", "3"}));
     }
     WalReader reader(path);
     std::vector<WalRecord> records;
-    ASSERT_STATUS_CODE(reader.ReadAll(&records), StatusCode::Corruption);
+    ASSERT_STATUS_OK(reader.ReadAll(&records));
+    ASSERT_EQ(records.size(), 3);
+    ASSERT_EQ(records.front().sequence_number, 0);
+    ASSERT_EQ(records.back().sequence_number, 3);
     std::filesystem::remove(path);
 }
 
