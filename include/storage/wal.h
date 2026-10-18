@@ -69,6 +69,8 @@ private:
     StorageMetrics* metrics_ = nullptr; // non-owning
     std::ofstream file_;
     bool is_open_{false};
+    uint64_t last_sequence_number_{0};
+    bool has_appended_record_{false};
 };
 
 /**

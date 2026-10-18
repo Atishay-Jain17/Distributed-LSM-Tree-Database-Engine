@@ -82,7 +82,9 @@ WalWriter::WalWriter(WalWriter&& other) noexcept
       sync_on_append_(other.sync_on_append_),
       metrics_(other.metrics_),
       file_(std::move(other.file_)),
-      is_open_(other.is_open_) {
+            is_open_(other.is_open_),
+            last_sequence_number_(other.last_sequence_number_),
+            has_appended_record_(other.has_appended_record_) {
     other.is_open_ = false;
 }
 
@@ -94,6 +96,8 @@ WalWriter& WalWriter::operator=(WalWriter&& other) noexcept {
         metrics_ = other.metrics_;
         file_ = std::move(other.file_);
         is_open_ = other.is_open_;
+        last_sequence_number_ = other.last_sequence_number_;
+        has_appended_record_ = other.has_appended_record_;
         other.is_open_ = false;
     }
     return *this;
@@ -133,6 +137,9 @@ Status WalWriter::Append(const WalRecord& record) {
         (record.op_type != WalOpType::Put && record.op_type != WalOpType::Delete) ||
         (record.op_type == WalOpType::Delete && !record.value.empty())) {
         return Status::InvalidArgument("Invalid WAL record fields");
+    }
+    if (has_appended_record_ && record.sequence_number <= last_sequence_number_) {
+        return Status::InvalidArgument("WAL sequence numbers must increase");
     }
     constexpr size_t kMaxPayload = 64 * 1024 * 1024;
     if (record.key.size() + record.value.size() + 25 > kMaxPayload) {
@@ -174,6 +181,8 @@ Status WalWriter::Append(const WalRecord& record) {
     if (!file_) {
         return Status::IOError("Failed to write record to WAL: " + log_path_);
     }
+    last_sequence_number_ = record.sequence_number;
+    has_appended_record_ = true;
 
     if (sync_on_append_) {
         file_.flush();
