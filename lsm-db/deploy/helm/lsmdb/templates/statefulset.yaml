@@ -1,0 +1,79 @@
+{{- if ne (int .Values.replicas) 3 }}
+{{- fail "this prototype peer configuration requires exactly three replicas" }}
+{{- end }}
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  serviceName: {{ .Release.Name }}-headless
+  replicas: {{ .Values.replicas }}
+  podManagementPolicy: Parallel
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/name: lsmdb
+    spec:
+      terminationGracePeriodSeconds: 20
+      securityContext:
+        fsGroup: 10001
+      containers:
+        - name: node
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              ordinal="${POD_NAME##*-}"
+              node_id=$((ordinal + 1))
+              peers=""
+              for peer_ordinal in 0 1 2; do
+                [ "$peer_ordinal" = "$ordinal" ] && continue
+                peer_id=$((peer_ordinal + 1))
+                peer="${peer_id}={{ .Release.Name }}-${peer_ordinal}.{{ .Release.Name }}-headless:{{ .Values.service.port }}"
+                peers="${peers:+${peers},}${peer}"
+              done
+              exec /app/lsmdb_node --node-id "$node_id" --port {{ .Values.service.port }} \
+                --host "${POD_NAME}.{{ .Release.Name }}-headless" --peers "$peers" --data-dir /var/lib/lsmdb
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+          ports:
+            - name: grpc
+              containerPort: {{ .Values.service.port }}
+          startupProbe:
+            tcpSocket:
+              port: grpc
+            periodSeconds: 2
+            failureThreshold: 30
+          readinessProbe:
+            tcpSocket:
+              port: grpc
+            periodSeconds: 5
+          livenessProbe:
+            tcpSocket:
+              port: grpc
+            periodSeconds: 10
+            failureThreshold: 3
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/lsmdb
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+{{- if .Values.storage.storageClassName }}
+        storageClassName: {{ .Values.storage.storageClassName | quote }}
+{{- end }}
+        resources:
+          requests:
+            storage: {{ .Values.storage.size }}

@@ -1,0 +1,36 @@
+// Node <-> node and operational RPCs.
+// Operational node information. Raft peer RPCs are defined in raft.proto.
+syntax = "proto3";
+
+package lsmdb.v1;
+
+import "lsmdb/v1/common.proto";
+
+service NodeService {
+  // Liveness check. The response identifies the responding node.
+  rpc Ping(PingRequest) returns (PingResponse);
+  // Returns this node's identity and the peers it was configured with.
+  rpc GetNodeInfo(GetNodeInfoRequest) returns (GetNodeInfoResponse);
+}
+
+message PingRequest {
+  RequestMeta meta = 1;
+}
+message PingResponse {
+  Status status = 1;
+  NodeInfo responder = 2;
+}
+
+message GetNodeInfoRequest {
+  RequestMeta meta = 1;
+}
+message GetNodeInfoResponse {
+  Status status = 1;
+  NodeInfo self = 2;
+  repeated NodeInfo peers = 3;
+  bool is_leader = 4;
+  uint64 current_term = 5;
+  uint32 leader_id = 6;
+  uint64 commit_index = 7;
+  uint64 last_applied = 8;
+}

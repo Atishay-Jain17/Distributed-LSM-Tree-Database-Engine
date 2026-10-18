@@ -1,0 +1,40 @@
+// Shared types used by every RPC in the Distributed LSM-Tree DB.
+// Owner: Vinayak (RPC layer). Changes to this file need review by another member.
+syntax = "proto3";
+
+package lsmdb.v1;
+
+// Outcome of an operation. Application-level outcomes are carried in the
+// response body (Status) so that a gRPC transport error always means
+// "the message did not get through", never "the key was missing".
+// NUMBERS ARE PART OF THE WIRE CONTRACT: never renumber, only append.
+enum StatusCode {
+  STATUS_CODE_OK = 0;
+  STATUS_CODE_INVALID_ARGUMENT = 1;  // request failed validation
+  STATUS_CODE_NOT_FOUND = 2;         // key does not exist
+  STATUS_CODE_NOT_LEADER = 3;        // reserved for Raft (Week 5/6); see leader_hint
+  STATUS_CODE_UNAVAILABLE = 4;       // node/peer unreachable or timed out
+  STATUS_CODE_INTERNAL = 5;          // unexpected server-side failure
+}
+
+// Identity and address of a node in the cluster.
+// node_id is 1-based (1, 2, 3). node_id 0 means "not a cluster node" (external client).
+message NodeInfo {
+  uint32 node_id = 1;
+  string host = 2;
+  uint32 port = 3;
+}
+
+// Metadata attached to every request.
+message RequestMeta {
+  string request_id = 1;          // caller-chosen id for tracing/de-duplication (max 128 bytes)
+  uint32 sender_node_id = 2;      // 0 = external client, otherwise the sending node's id
+  int64 client_timestamp_ms = 3;  // optional, informational only (Unix epoch milliseconds)
+}
+
+// Result of an operation, returned inside every response.
+message Status {
+  StatusCode code = 1;
+  string message = 2;       // human-readable detail, empty on success
+  NodeInfo leader_hint = 3; // set with STATUS_CODE_NOT_LEADER once Raft exists
+}

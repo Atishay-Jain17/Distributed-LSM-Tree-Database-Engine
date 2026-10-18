@@ -1,0 +1,22 @@
+# Build directories
+build/
+bin/
+lib/
+out/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Data and runtime directories
+data/
+smoke_test_data/
+*.log
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*~
+*.user
+.DS_Store

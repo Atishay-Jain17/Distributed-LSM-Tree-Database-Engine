@@ -1,0 +1,22 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: lsmdb-network-partition
+  namespace: default
+spec:
+  action: partition
+  mode: all
+  selector:
+    namespaces:
+      - default
+    labelSelectors:
+      app.kubernetes.io/name: lsmdb
+  direction: both
+  target:
+    mode: one
+    selector:
+      namespaces:
+        - default
+      labelSelectors:
+        app.kubernetes.io/name: lsmdb
+  duration: "30s"

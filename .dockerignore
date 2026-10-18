@@ -1,0 +1,9 @@
+.git
+.github
+.vs
+build
+**/build
+data
+**/data
+*.log
+*.tmp

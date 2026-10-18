@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distributed LSM-Tree Database Engine | Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Top Navigation & Connection Status -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-title">
+        <span class="brand-icon">⬡</span>
+        <div class="brand-text">
+          <h1>Distributed LSM-Tree</h1>
+          <span class="brand-sub">Raft Consensus &bull; Persistent Storage Engine</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="connection-group">
+        <span class="connection-indicator" id="connIndicator"></span>
+        <span class="connection-label" id="connLabel">Checking...</span>
+      </div>
+      <div class="cluster-actions">
+        <button id="btnStartCluster" class="btn btn-secondary btn-sm" title="Launch 3-node Raft cluster in background">Start Cluster</button>
+        <button id="btnStopCluster" class="btn btn-secondary btn-sm" title="Stop local nodes">Stop Cluster</button>
+        <button id="btnRefresh" class="btn btn-primary btn-sm">Refresh Status</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <!-- Notice / Error Banner -->
+    <div id="statusBanner" class="alert-banner hidden"></div>
+
+    <!-- Cluster Overview Section -->
+    <section class="section-block">
+      <div class="section-header">
+        <div>
+          <h2>Cluster Topology & Consensus State</h2>
+          <p class="section-desc">Real-time health, active Raft term, and replicated log state reported directly by <code>kv_cli info</code>.</p>
+        </div>
+        <div class="cluster-summary-pills">
+          <span class="summary-pill" id="summaryLeader">Leader: <strong id="valLeader">Detecting...</strong></span>
+          <span class="summary-pill" id="summaryTerm">Term: <strong id="valTerm">-</strong></span>
+          <span class="summary-pill auto-refresh-toggle">
+            <label>
+              <input type="checkbox" id="autoRefreshToggle" checked> Auto-refresh (3s)
+            </label>
+          </span>
+        </div>
+      </div>
+
+      <div class="node-grid" id="nodeGrid">
+        <!-- Node Cards dynamically populated by app.js -->
+        <div class="node-card skeleton">
+          <div class="node-card-header">
+            <span class="skeleton-pill"></span>
+            <span class="skeleton-pill"></span>
+          </div>
+          <div class="node-card-body">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+          </div>
+        </div>
+        <div class="node-card skeleton">
+          <div class="node-card-header">
+            <span class="skeleton-pill"></span>
+            <span class="skeleton-pill"></span>
+          </div>
+          <div class="node-card-body">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+          </div>
+        </div>
+        <div class="node-card skeleton">
+          <div class="node-card-header">
+            <span class="skeleton-pill"></span>
+            <span class="skeleton-pill"></span>
+          </div>
+          <div class="node-card-body">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Working Grid: KV Operations & Activity Feed -->
+    <div class="two-column-layout">
+      <!-- Key-Value Operations Panel -->
+      <section class="card-panel">
+        <div class="panel-header">
+          <h3>Key-Value Operations</h3>
+          <span class="panel-badge">Direct gRPC / CLI Bridge</span>
+        </div>
+        <p class="panel-desc">Execute operations against any cluster node. Writes to follower nodes are automatically redirected to the active Raft leader.</p>
+
+        <!-- Operation Tabs -->
+        <div class="op-tabs">
+          <button class="tab-btn active" data-op="put">PUT</button>
+          <button class="tab-btn" data-op="get">GET</button>
+          <button class="tab-btn" data-op="delete">DELETE</button>
+        </div>
+
+        <form id="kvForm" class="kv-form">
+          <div class="form-group">
+            <label for="targetEndpoint">Target Node Endpoint</label>
+            <select id="targetEndpoint" class="form-input">
+              <option value="127.0.0.1:50051">Node 1 (127.0.0.1:50051)</option>
+              <option value="127.0.0.1:50052">Node 2 (127.0.0.1:50052)</option>
+              <option value="127.0.0.1:50053">Node 3 (127.0.0.1:50053)</option>
+            </select>
+            <span class="field-hint">Select a follower to observe automatic leader redirect hints.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="kvKey">Key <span class="required">*</span></label>
+            <input type="text" id="kvKey" class="form-input" placeholder="e.g. user:1001" required>
+          </div>
+
+          <div class="form-group" id="groupValue">
+            <label for="kvValue">Value <span class="required">*</span></label>
+            <input type="text" id="kvValue" class="form-input" placeholder="e.g. payload_data_alpha" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="btnSubmitKv" class="btn btn-primary">
+              <span id="btnSubmitText">Execute PUT</span>
+              <span id="btnSubmitSpinner" class="spinner hidden"></span>
+            </button>
+            <button type="button" id="btnClearForm" class="btn btn-secondary">Clear</button>
+          </div>
+        </form>
+
+        <!-- Execution Result Card -->
+        <div class="result-box" id="resultBox">
+          <div class="result-header">
+            <span class="result-title">Response</span>
+            <span class="badge" id="resStatusBadge">-</span>
+          </div>
+          <div class="result-meta-row">
+            <span class="meta-item">Target: <strong id="resTarget">-</strong></span>
+            <span class="meta-item">Handling Node: <strong id="resHandling">-</strong></span>
+            <span class="meta-item">Latency: <strong id="resLatency">-</strong></span>
+          </div>
+          <div class="result-content-container">
+            <div class="result-content" id="resContent">Submit an operation to see responses.</div>
+          </div>
+          <div class="raw-toggle-wrap">
+            <button type="button" class="btn-link" id="btnToggleRaw">View raw output</button>
+            <pre class="raw-output hidden" id="rawOutput"></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activity Feed Panel -->
+      <section class="card-panel">
+        <div class="panel-header">
+          <h3>Activity Feed</h3>
+          <span class="activity-counter" id="activityCount">0 events</span>
+        </div>
+        <p class="panel-desc">Real-time log of cluster operations, quorum writes, leader hints, and health events.</p>
+
+        <div class="activity-table-wrapper">
+          <table class="activity-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Op</th>
+                <th>Key</th>
+                <th>Target</th>
+                <th>Handling Node</th>
+                <th>Status</th>
+                <th>Latency</th>
+              </tr>
+            </thead>
+            <tbody id="activityTableBody">
+              <tr>
+                <td colspan="7" class="empty-state">No operations recorded yet. Use the operations panel to begin.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <span>Distributed LSM-Tree Database Engine &bull; University PBL Coursework</span>
+    <span>CLI &amp; gRPC Backend verified on Linux / WSL2 &bull; Port 50051–50053</span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
